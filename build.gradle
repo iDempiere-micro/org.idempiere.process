@@ -1,4 +1,6 @@
 dependencies {
     compile project(':org.adempiere.base')
     compile files('../org.adempiere.base/bin')
+    compile project(':org.idempiere.common')
+    compile files('../org.idempiere.common/bin')
 }
