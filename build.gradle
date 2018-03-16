@@ -1,0 +1,4 @@
+dependencies {
+    compile project(':org.adempiere.base')
+    compile files('../org.adempiere.base/bin')
+}
