@@ -18,8 +18,10 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.model.MRequest;
-import org.idempiere.util.AdempiereUserError;
+import org.compiere.impl.MRequest;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereUserError;
 
 
 /**

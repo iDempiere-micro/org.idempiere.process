@@ -19,13 +19,15 @@ package org.idempiere.process;
 import java.util.ArrayList;
 import java.util.logging.Level;
 
-import org.compiere.model.MAccount;
-import org.compiere.model.MAcctSchema;
-import org.compiere.model.MAcctSchemaDefault;
-import org.compiere.model.MAcctSchemaElement;
-import org.compiere.model.MAcctSchemaGL;
-import org.compiere.util.AdempiereSystemError;
-import org.idempiere.util.AdempiereUserError;
+import org.compiere.impl.MAccount;
+import org.compiere.impl.MAcctSchema;
+import org.compiere.impl.MAcctSchemaDefault;
+import org.compiere.impl.MAcctSchemaElement;
+import org.compiere.impl.MAcctSchemaGL;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereSystemError;
+import org.idempiere.common.util.AdempiereUserError;
 import org.idempiere.common.util.KeyNamePair;
 
 /**

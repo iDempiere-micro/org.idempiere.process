@@ -28,21 +28,19 @@ import java.util.Iterator;
 import java.util.Vector;
 import java.util.logging.Level;
 
-import org.compiere.model.MAcctSchema;
-import org.compiere.model.MClientInfo;
-import org.compiere.model.MDiscountSchemaLine;
-import org.compiere.model.MProduct;
-import org.compiere.model.MProductPrice;
-import org.compiere.model.MSequence;
-import org.compiere.model.MUOMConversion;
-import org.compiere.model.ProductCost;
-import org.compiere.util.AdempiereSystemError;
-import org.idempiere.util.AdempiereUserError;
-import org.compiere.util.CLogger;
-import org.compiere.util.CPreparedStatement;
-import org.compiere.util.DB;
+import org.compiere.impl.MAcctSchema;
+import org.compiere.impl.MClientInfo;
+import org.compiere.impl.MDiscountSchemaLine;
+import org.compiere.impl.MProduct;
+import org.compiere.impl.MProductPrice;
+import org.compiere.impl.MSequence;
+import org.compiere.impl.MUOMConversion;
+import org.compiere.impl.ProductCost;
+import org.idempiere.common.util.*;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 import org.idempiere.common.util.Env;
-import org.compiere.util.ValueNamePair;
 
 /**
  * Create PriceList by copying purchase prices (M_Product_PO) 

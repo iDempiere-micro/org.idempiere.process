@@ -19,7 +19,10 @@ package org.idempiere.process;
 import java.math.BigDecimal;
 import java.util.logging.Level;
 
-import org.compiere.model.MInvoice;
+import org.compiere.impl.MInvoice;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 
 /**
  *  Copy Invoice Lines

@@ -23,8 +23,11 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.logging.Level;
 
+import org.compiere.impl.MSequence;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 import org.idempiere.common.exceptions.DBException;
-import org.compiere.util.DB;
+import org.idempiere.common.util.DB;
 
 /**
  *	Import ReportLines from I_ReportLine
@@ -297,7 +300,7 @@ public class ImportReportLine extends SvrProcess
 				//
 				try
 				{
-					int PA_ReportLine_ID = DB.getNextID(m_AD_Client_ID, "PA_ReportLine", get_TrxName());
+					int PA_ReportLine_ID = MSequence.getNextID(m_AD_Client_ID, "PA_ReportLine", get_TrxName());
 					if (PA_ReportLine_ID <= 0)
 						throw new DBException("No NextID (" + PA_ReportLine_ID + ")");
 					pstmt_insertLine.setInt(1, PA_ReportLine_ID);
@@ -420,7 +423,7 @@ public class ImportReportLine extends SvrProcess
 				{
 					try
 					{
-						PA_ReportSource_ID = DB.getNextID(m_AD_Client_ID, "PA_ReportSource", get_TrxName());
+						PA_ReportSource_ID = MSequence.getNextID(m_AD_Client_ID, "PA_ReportSource", get_TrxName());
 						if (PA_ReportSource_ID <= 0)
 							throw new DBException("No NextID (" + PA_ReportSource_ID + ")");
 						pstmt_insertSource.setInt(1, PA_ReportSource_ID);

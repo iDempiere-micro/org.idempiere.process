@@ -18,6 +18,8 @@ package org.idempiere.process;
 
 //import org.compiere.util.*;
 
+import org.compiere.process.SvrProcess;
+
 /**
  * 	Validate Support
  *	

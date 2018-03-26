@@ -19,9 +19,11 @@ package org.idempiere.process;
 import java.math.BigDecimal;
 import java.util.logging.Level;
 
-import org.compiere.model.MContainer;
-import org.compiere.model.MNewsChannel;
-import org.compiere.model.MNewsItem;
+import org.compiere.impl.MContainer;
+import org.compiere.impl.MNewsChannel;
+import org.compiere.impl.MNewsItem;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 
 /**
  *	Reindex all Content

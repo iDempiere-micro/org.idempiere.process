@@ -27,10 +27,12 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.model.MInfoColumn;
-import org.compiere.model.MInfoWindow;
-import org.compiere.model.PO;
-import org.compiere.util.AdempiereSystemError;
+import org.compiere.impl.MInfoColumn;
+import org.compiere.impl.MInfoWindow;
+import org.compiere.impl.PO;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereSystemError;
 
 /**
  *	Copy Info Window Columns from other Info Window

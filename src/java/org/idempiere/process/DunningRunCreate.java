@@ -22,15 +22,18 @@ import java.sql.ResultSet;
 import java.util.logging.Level;
 
 import org.adempiere.exceptions.BPartnerNoAddressException;
-import org.compiere.model.MBPartner;
-import org.compiere.model.MDunningLevel;
-import org.compiere.model.MDunningRun;
-import org.compiere.model.MDunningRunEntry;
-import org.compiere.model.MDunningRunLine;
-import org.compiere.model.MInvoice;
-import org.compiere.model.MPayment;
-import org.compiere.util.DB;
+import org.compiere.impl.MBPartner;
+import org.compiere.impl.MDunningLevel;
+import org.compiere.impl.MDunningRun;
+import org.compiere.impl.MDunningRunEntry;
+import org.compiere.impl.MDunningRunLine;
+import org.compiere.impl.MInvoice;
+import org.compiere.impl.MPayment;
 import org.idempiere.common.util.Env;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.DB;
 
 
 /**

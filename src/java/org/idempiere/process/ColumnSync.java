@@ -22,12 +22,13 @@ import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
 import java.util.logging.Level;
 
-import org.compiere.model.MColumn;
-import org.compiere.model.MTable;
-import org.idempiere.util.AdempiereUserError;
-import org.compiere.util.CLogger;
-import org.compiere.util.DB;
-import org.compiere.util.ValueNamePair;
+import org.compiere.impl.MColumn;
+import org.compiere.impl.MTable;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.*;
+
 
 /**
  *	Synchronize Column with Database

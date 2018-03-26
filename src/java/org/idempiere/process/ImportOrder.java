@@ -23,15 +23,19 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.logging.Level;
 
-import org.compiere.model.MBPartner;
-import org.compiere.model.MBPartnerLocation;
-import org.compiere.model.MLocation;
-import org.compiere.model.MOrder;
-import org.compiere.model.MOrderLine;
-import org.compiere.model.MUser;
-import org.compiere.model.X_I_Order;
-import org.compiere.util.DB;
+import org.compiere.impl.MBPartner;
+import org.compiere.impl.MBPartnerLocation;
+import org.compiere.impl.MLocation;
+import org.compiere.impl.MOrder;
+import org.compiere.impl.MOrderLine;
+import org.compiere.impl.MUser;
+import org.compiere.impl.X_I_Order;
 import org.idempiere.common.util.Env;
+
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.DB;
 
 /**
  *	Import Order from I_Order

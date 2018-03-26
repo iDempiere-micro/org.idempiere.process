@@ -31,16 +31,16 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.model.MColumn;
-import org.compiere.model.MField;
-import org.compiere.model.MProcess;
-import org.compiere.model.MProcessPara;
-import org.compiere.model.MTab;
-import org.compiere.model.X_ASP_Field;
-import org.compiere.model.X_ASP_Process;
-import org.compiere.model.X_ASP_Process_Para;
-import org.compiere.model.X_ASP_Tab;
-import org.compiere.model.X_ASP_Workflow;
+import org.compiere.impl.MColumn;
+import org.compiere.impl.MField;
+import org.compiere.impl.MProcess;
+import org.compiere.impl.MProcessPara;
+import org.compiere.impl.MTab;
+import org.compiere.impl.X_ASP_Field;
+import org.compiere.impl.X_ASP_Process;
+import org.compiere.impl.X_ASP_Process_Para;
+import org.compiere.impl.X_ASP_Tab;
+import org.compiere.impl.X_ASP_Workflow;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.compiere.util.DisplayType;

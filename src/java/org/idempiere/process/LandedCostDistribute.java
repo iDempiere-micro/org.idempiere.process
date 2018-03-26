@@ -18,8 +18,10 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.model.MLandedCost;
-import org.idempiere.util.AdempiereUserError;
+import org.compiere.impl.MLandedCost;
+
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereUserError;
 
 /**
  * 	Distribute Landed Costs

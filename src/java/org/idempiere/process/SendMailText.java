@@ -22,15 +22,17 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 
-import org.compiere.model.MClient;
-import org.compiere.model.MInterestArea;
-import org.compiere.model.MMailText;
-import org.compiere.model.MStore;
-import org.compiere.model.MUser;
-import org.compiere.model.MUserMail;
-import org.compiere.util.DB;
-import org.compiere.util.EMail;
+import org.compiere.impl.MClient;
+import org.compiere.impl.MInterestArea;
+import org.compiere.impl.MMailText;
+import org.compiere.impl.MStore;
+import org.compiere.impl.MUser;
+import org.compiere.impl.MUserMail;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.compiere.webutil.EMail;
 import org.compiere.util.Msg;
+import org.idempiere.common.util.DB;
 
 /**
  *  Send Mail to Interest Area Subscribers

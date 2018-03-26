@@ -23,12 +23,15 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.logging.Level;
 
-import org.compiere.model.MAccount;
-import org.compiere.model.MAcctSchema;
-import org.compiere.model.MColumn;
-import org.compiere.model.MElementValue;
-import org.compiere.model.X_I_ElementValue;
-import org.compiere.util.DB;
+import org.compiere.impl.MAccount;
+import org.compiere.impl.MAcctSchema;
+import org.compiere.impl.MColumn;
+import org.compiere.impl.MElementValue;
+import org.compiere.impl.X_I_ElementValue;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.DB;
 
 /**
  *	Import Accounts from I_ElementValue

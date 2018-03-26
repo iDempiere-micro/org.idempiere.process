@@ -17,7 +17,9 @@ package org.idempiere.process;
 import java.math.BigDecimal;
 import java.util.logging.Level;
 
-import org.compiere.model.MJournal;
+import org.compiere.impl.MJournal;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 
 /**
  *  Copy GL Journal/Lines

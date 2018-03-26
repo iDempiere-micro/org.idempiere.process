@@ -16,7 +16,9 @@
  *****************************************************************************/
 package org.idempiere.process;
 
-import org.compiere.util.CacheMgt;
+import org.compiere.process.ClientProcess;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.CacheMgt;
 import org.idempiere.common.util.Env;
 
 /**
@@ -43,7 +45,7 @@ public class CacheReset extends SvrProcess implements ClientProcess
 	protected String doIt() throws java.lang.Exception
 	{
 		log.info("");
-		Env.reset(false);	// not final
+		//Env.reset(false);	// not final
 		CacheMgt.get().reset();
 		return "Cache Reset";
 	}	//	doIt

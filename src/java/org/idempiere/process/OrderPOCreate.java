@@ -22,13 +22,17 @@ import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.logging.Level;
 
-import org.compiere.model.MBPartner;
-import org.compiere.model.MOrder;
-import org.compiere.model.MOrderLine;
-import org.compiere.model.MOrgInfo;
-import org.idempiere.util.AdempiereUserError;
-import org.compiere.util.DB;
+import org.compiere.impl.MBPartner;
+import org.compiere.impl.MOrder;
+import org.compiere.impl.MOrderLine;
+import org.compiere.impl.MOrgInfo;
 import org.compiere.util.Msg;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereUserError;
+import org.idempiere.common.util.DB;
+
 
 /**
  *	Generate PO from Sales Order

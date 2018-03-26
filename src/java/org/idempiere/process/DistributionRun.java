@@ -23,27 +23,29 @@ import java.sql.Timestamp;
 import java.util.List;
 import java.util.logging.Level;
 
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 import org.idempiere.common.exceptions.AdempiereException;
 import org.compiere.model.I_T_DistributionRunDetail;
-import org.compiere.model.MBPartner;
-import org.compiere.model.MDistributionRun;
-import org.compiere.model.MDistributionRunDetail;
-import org.compiere.model.MDistributionRunLine;
-import org.compiere.model.MDocType;
-import org.compiere.model.MLocator;
-import org.compiere.model.MOrder;
-import org.compiere.model.MOrderLine;
-import org.compiere.model.MOrg;
-import org.compiere.model.MOrgInfo;
-import org.compiere.model.MProduct;
-import org.compiere.model.MTable;
-import org.compiere.model.MWarehouse;
-import org.compiere.model.Query;
-import org.compiere.util.DB;
+import org.compiere.impl.MBPartner;
+import org.compiere.impl.MDistributionRun;
+import org.compiere.impl.MDistributionRunDetail;
+import org.compiere.impl.MDistributionRunLine;
+import org.compiere.impl.MDocType;
+import org.compiere.impl.MLocator;
+import org.compiere.impl.MOrder;
+import org.compiere.impl.MOrderLine;
+import org.compiere.impl.MOrg;
+import org.compiere.impl.MOrgInfo;
+import org.compiere.impl.MProduct;
+import org.compiere.impl.MTable;
+import org.compiere.impl.MWarehouse;
+import org.compiere.impl.Query;
+import org.idempiere.common.util.DB;
 import org.idempiere.common.util.Env;
 import org.compiere.util.Msg;
-import org.eevolution.model.MDDOrder;
-import org.eevolution.model.MDDOrderLine;
+import org.eevolution.impl.MDDOrder;
+import org.eevolution.impl.MDDOrderLine;
 
 /**
  *	Create Distribution	

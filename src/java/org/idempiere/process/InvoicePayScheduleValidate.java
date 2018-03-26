@@ -19,10 +19,13 @@ package org.idempiere.process;
 import java.math.BigDecimal;
 import java.util.logging.Level;
 
-import org.compiere.model.MInvoice;
-import org.compiere.model.MInvoicePaySchedule;
+import org.compiere.impl.MInvoice;
+import org.compiere.impl.MInvoicePaySchedule;
 import org.idempiere.common.util.Env;
 import org.compiere.util.Msg;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 
 /**
  *	Validate Invoice Payment Schedule

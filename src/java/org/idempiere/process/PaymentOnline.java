@@ -19,7 +19,9 @@ package org.idempiere.process;
 //import org.compiere.process.*;
 import java.util.logging.Level;
 
-import org.compiere.model.MPayment;
+import org.compiere.impl.MPayment;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 
 
 /**

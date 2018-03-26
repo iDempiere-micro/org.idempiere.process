@@ -15,11 +15,11 @@ package org.idempiere.process;
 
 import java.math.BigDecimal;
 
-import org.compiere.model.MAcctSchema;
-import org.compiere.model.MClient;
-import org.compiere.model.MCost;
-import org.compiere.model.MInventoryLine;
-import org.compiere.model.MProduct;
+import org.compiere.impl.MAcctSchema;
+import org.compiere.impl.MClient;
+import org.compiere.impl.MCost;
+import org.compiere.impl.MInventoryLine;
+import org.compiere.impl.MProduct;
 import org.compiere.process.SvrProcess;
 
 /**

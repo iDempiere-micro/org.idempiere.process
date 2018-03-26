@@ -39,9 +39,9 @@ import java.util.List;
 import java.util.logging.Level;
 
 import org.compiere.acct.DocManager;
-import org.compiere.model.MAcctSchema;
-import org.compiere.model.MClient;
-import org.compiere.model.MCost;
+import org.compiere.impl.MAcctSchema;
+import org.compiere.impl.MClient;
+import org.compiere.impl.MCost;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.compiere.util.Msg;

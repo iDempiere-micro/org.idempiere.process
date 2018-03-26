@@ -19,8 +19,12 @@ package org.idempiere.process;
 import java.sql.Timestamp;
 import java.util.logging.Level;
 
-import org.compiere.model.MYear;
-import org.idempiere.util.AdempiereUserError;
+import org.compiere.impl.MYear;
+
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereUserError;
 
 /**
  *	Create Periods of year

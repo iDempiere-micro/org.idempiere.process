@@ -21,15 +21,17 @@ import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.logging.Level;
 
-import org.compiere.model.MColumn;
-import org.compiere.model.MField;
-import org.compiere.model.MTab;
-import org.compiere.model.MTable;
-import org.compiere.model.PO;
-import org.compiere.util.AdempiereSystemError;
-import org.compiere.util.DB;
+import org.compiere.impl.MColumn;
+import org.compiere.impl.MField;
+import org.compiere.impl.MTab;
+import org.compiere.impl.MTable;
+import org.idempiere.orm.PO;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 import org.compiere.util.DisplayType;
-import org.compiere.util.Util;
+import org.idempiere.common.util.AdempiereSystemError;
+import org.idempiere.common.util.DB;
+import org.idempiere.common.util.Util;
 
 
 /**

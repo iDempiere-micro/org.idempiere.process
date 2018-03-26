@@ -32,14 +32,13 @@ package org.idempiere.process;
 import java.io.File;
 import java.util.logging.Level;
 
-import org.compiere.Adempiere;
-import org.compiere.model.MCity;
-import org.compiere.model.MCurrency;
-import org.compiere.model.MSetup;
-import org.compiere.model.MSysConfig;
+import org.compiere.impl.MCity;
+import org.compiere.impl.MCurrency;
+import org.compiere.impl.MSetup;
+import org.compiere.impl.MSysConfig;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
-import org.compiere.util.EMail;
+import org.compiere.webutil.EMail;
 import org.idempiere.common.exceptions.AdempiereException;
 import org.idempiere.common.util.*;
 

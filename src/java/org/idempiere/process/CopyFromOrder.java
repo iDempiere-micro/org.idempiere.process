@@ -19,7 +19,11 @@ package org.idempiere.process;
 import java.math.BigDecimal;
 import java.util.logging.Level;
 
-import org.compiere.model.MOrder;
+import org.compiere.impl.MOrder;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+
 
 /**
  *  Copy Order Lines

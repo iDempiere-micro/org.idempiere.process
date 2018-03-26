@@ -19,12 +19,14 @@ package org.idempiere.process;
 import java.math.BigDecimal;
 import java.util.logging.Level;
 
-import org.compiere.model.MBPartner;
-import org.compiere.model.MDistributionList;
-import org.compiere.model.MDistributionListLine;
-import org.compiere.model.MOrder;
-import org.compiere.model.MOrderLine;
-import org.compiere.model.MProduct;
+import org.compiere.impl.MBPartner;
+import org.compiere.impl.MDistributionList;
+import org.compiere.impl.MDistributionListLine;
+import org.compiere.impl.MOrder;
+import org.compiere.impl.MOrderLine;
+import org.compiere.impl.MProduct;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 import org.idempiere.common.util.Env;
 
 /**

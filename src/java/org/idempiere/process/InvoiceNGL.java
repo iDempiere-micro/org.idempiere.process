@@ -21,21 +21,25 @@ import java.sql.Timestamp;
 import java.util.List;
 import java.util.logging.Level;
 
-import org.compiere.model.MAccount;
-import org.compiere.model.MAcctSchema;
-import org.compiere.model.MAcctSchemaDefault;
-import org.compiere.model.MDocType;
-import org.compiere.model.MFactAcct;
-import org.compiere.model.MGLCategory;
-import org.compiere.model.MInvoice;
-import org.compiere.model.MJournal;
-import org.compiere.model.MJournalLine;
-import org.compiere.model.MOrg;
-import org.compiere.model.Query;
-import org.compiere.model.X_T_InvoiceGL;
-import org.compiere.util.DB;
+import org.compiere.impl.MAccount;
+import org.compiere.impl.MAcctSchema;
+import org.compiere.impl.MAcctSchemaDefault;
+import org.compiere.impl.MDocType;
+import org.compiere.impl.MFactAcct;
+import org.compiere.impl.MGLCategory;
+import org.compiere.impl.MInvoice;
+import org.compiere.impl.MJournal;
+import org.compiere.impl.MJournalLine;
+import org.compiere.impl.MOrg;
+import org.compiere.impl.Query;
+import org.compiere.impl.X_T_InvoiceGL;
 import org.idempiere.common.util.Env;
 import org.compiere.util.Msg;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.DB;
+
 
 /**
  * 	Invoice Not realized Gain & Loss.

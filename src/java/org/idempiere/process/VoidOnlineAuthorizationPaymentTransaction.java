@@ -3,9 +3,12 @@ package org.idempiere.process;
 import java.util.logging.Level;
 
 import org.idempiere.common.exceptions.AdempiereException;
-import org.compiere.model.MPaymentTransaction;
+import org.compiere.impl.MPaymentTransaction;
 import org.idempiere.common.util.Env;
 import org.compiere.util.Msg;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 
 public class VoidOnlineAuthorizationPaymentTransaction extends SvrProcess {
 

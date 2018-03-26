@@ -18,7 +18,9 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.model.MDocTypeCounter;
+import org.compiere.impl.MDocTypeCounter;
+
+import org.compiere.process.SvrProcess;
 
 /**
  *	Validate Counter Document

@@ -18,15 +18,17 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.model.MBPartner;
-import org.compiere.model.MBPartnerLocation;
-import org.compiere.model.MLocator;
-import org.compiere.model.MOrg;
-import org.compiere.model.MOrgInfo;
-import org.compiere.model.MRole;
-import org.compiere.model.MRoleOrgAccess;
-import org.compiere.model.MWarehouse;
-import org.idempiere.util.AdempiereUserError;
+import org.compiere.impl.MBPartner;
+import org.compiere.impl.MBPartnerLocation;
+import org.compiere.impl.MLocator;
+import org.compiere.impl.MOrg;
+import org.compiere.impl.MOrgInfo;
+import org.compiere.impl.MRole;
+import org.compiere.impl.MRoleOrgAccess;
+import org.compiere.impl.MWarehouse;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereUserError;
 
 /**
  *	Link Business Partner to Organization.
@@ -82,7 +84,7 @@ public class BPartnerOrgLink extends SvrProcess
 			+ ", AD_OrgType_ID=" + p_AD_OrgType_ID
 			+ ", AD_Role_ID=" + p_AD_Role_ID);
 		if (p_C_BPartner_ID == 0)
-			throw new AdempiereUserError ("No Business Partner ID");
+			throw new AdempiereUserError("No Business Partner ID");
 		MBPartner bp = new MBPartner (getCtx(), p_C_BPartner_ID, get_TrxName());
 		if (bp.get_ID() == 0)
 			throw new AdempiereUserError ("Business Partner not found - C_BPartner_ID=" + p_C_BPartner_ID);

@@ -22,12 +22,14 @@ import java.util.List;
 import java.util.logging.Level;
 
 import org.adempiere.exceptions.FillMandatoryException;
-import org.compiere.model.MAcctSchema;
-import org.compiere.model.MCost;
-import org.compiere.model.MProduct;
-import org.compiere.model.MProductBOM;
-import org.compiere.model.Query;
-import org.compiere.model.X_T_BOM_Indented;
+import org.compiere.impl.MAcctSchema;
+import org.compiere.impl.MCost;
+import org.compiere.impl.MProduct;
+import org.compiere.impl.MProductBOM;
+import org.compiere.impl.Query;
+import org.compiere.impl.X_T_BOM_Indented;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 import org.idempiere.common.util.Env;
 
 /**

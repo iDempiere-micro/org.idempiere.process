@@ -22,10 +22,11 @@ import java.sql.ResultSet;
 import java.util.Properties;
 import java.util.logging.Level;
 
-import org.compiere.model.MDocType;
-import org.compiere.model.MPeriodControl;
-import org.compiere.util.CLogger;
-import org.compiere.util.DB;
+import org.compiere.impl.MDocType;
+import org.compiere.impl.MPeriodControl;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.CLogger;
+import org.idempiere.common.util.DB;
 
 /**
  *	Verify Document Types.

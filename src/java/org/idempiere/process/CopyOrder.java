@@ -20,8 +20,11 @@ import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.logging.Level;
 
-import org.compiere.model.MDocType;
-import org.compiere.model.MOrder;
+import org.compiere.impl.MDocType;
+import org.compiere.impl.MOrder;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 
 /**
  *	Copy Order and optionally close

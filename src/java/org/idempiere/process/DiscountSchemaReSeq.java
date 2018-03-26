@@ -18,9 +18,9 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.model.MDiscountSchema;
-import org.idempiere.util.AdempiereUserError;
-
+import org.compiere.impl.MDiscountSchema;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereUserError;
 
 /**
  *	Renumber Discount Schema

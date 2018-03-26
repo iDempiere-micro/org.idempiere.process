@@ -21,11 +21,14 @@ import java.util.List;
 import java.util.logging.Level;
 
 import org.compiere.Adempiere;
-import org.compiere.model.MRole;
-import org.compiere.model.Query;
-import org.compiere.util.CLogMgt;
-import org.compiere.util.CLogger;
-import org.idempiere.common.util.Env;
+import org.compiere.impl.MRole;
+import org.compiere.impl.Query;
+import org.compiere.process.ProcessInfo;
+import org.idempiere.common.util.*;
+
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 
 /**
  *	Update Role Access
@@ -40,7 +43,7 @@ import org.idempiere.common.util.Env;
 public class RoleAccessUpdate extends SvrProcess
 {
 	/**	Static Logger	*/
-	private static CLogger	s_log	= CLogger.getCLogger (RoleAccessUpdate.class);
+	private static CLogger s_log	= CLogger.getCLogger (RoleAccessUpdate.class);
 	
 	/**	Update Role				*/
 	private int	p_AD_Role_ID = -1;
@@ -128,7 +131,7 @@ public class RoleAccessUpdate extends SvrProcess
 	//add main method, preparing for nightly build
 	public static void main(String[] args) 
 	{
-		Adempiere.startupEnvironment(false);
+		Adempiere.getI().startupEnvironment(false);
 		CLogMgt.setLevel(Level.FINE);
 		s_log.info("Role Access Update");
 		s_log.info("------------------");

@@ -22,12 +22,13 @@ import java.sql.Timestamp;
 import java.util.logging.Level;
 
 import org.idempiere.common.exceptions.AdempiereException;
-import org.compiere.model.MAllocationHdr;
-import org.idempiere.util.AdempiereUserError;
-import org.compiere.util.DB;
-import org.idempiere.common.util.Env;
+import org.compiere.impl.MAllocationHdr;
+import org.idempiere.common.util.*;
 import org.compiere.util.Msg;
-import org.compiere.util.Trx;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.Env;
 
 /**
  *	Reset (delete) Allocations	
@@ -50,7 +51,7 @@ public class AllocationReset extends SvrProcess
 	/** All Allocations */
 	private boolean		p_AllAllocations = false;
 	/** Transaction				*/
-	private Trx			m_trx = null;
+	private Trx m_trx = null;
 	
 	/**
 	 *  Prepare - e.g., get Parameters.

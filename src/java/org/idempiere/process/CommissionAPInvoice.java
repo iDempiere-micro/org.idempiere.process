@@ -19,12 +19,14 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.model.MBPartner;
-import org.compiere.model.MCommission;
-import org.compiere.model.MCommissionRun;
-import org.compiere.model.MDocType;
-import org.compiere.model.MInvoice;
-import org.compiere.model.MInvoiceLine;
+import org.compiere.impl.MBPartner;
+import org.compiere.impl.MCommission;
+import org.compiere.impl.MCommissionRun;
+import org.compiere.impl.MDocType;
+import org.compiere.impl.MInvoice;
+import org.compiere.impl.MInvoiceLine;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 import org.idempiere.common.util.Env;
 
 /**

@@ -18,10 +18,12 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.model.MInOut;
-import org.compiere.model.MPackage;
-import org.compiere.model.MShipper;
- 
+import org.compiere.impl.MInOut;
+import org.compiere.impl.MPackage;
+import org.compiere.impl.MShipper;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+
 /**
  *	Create Package from Shipment for Shipper
  *	

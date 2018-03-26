@@ -23,17 +23,21 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.logging.Level;
 
-import org.compiere.model.MAllocationHdr;
-import org.compiere.model.MAllocationLine;
-import org.compiere.model.MClient;
-import org.compiere.model.MInvoice;
-import org.compiere.model.MPaySelectionCheck;
-import org.compiere.model.MPaySelectionLine;
-import org.compiere.model.MPayment;
-import org.compiere.util.AdempiereSystemError;
-import org.compiere.util.DB;
+import org.compiere.impl.MAllocationHdr;
+import org.compiere.impl.MAllocationLine;
+import org.compiere.impl.MClient;
+import org.compiere.impl.MInvoice;
+import org.compiere.impl.MPaySelectionCheck;
+import org.compiere.impl.MPaySelectionLine;
+import org.compiere.impl.MPayment;
 import org.idempiere.common.util.Env;
 import org.compiere.util.Msg;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.DB;
+import org.idempiere.common.util.AdempiereSystemError;
+
 
 /**
  *	Automatic Allocation Process

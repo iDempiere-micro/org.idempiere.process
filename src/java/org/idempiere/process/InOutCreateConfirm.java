@@ -18,9 +18,12 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.model.MInOut;
-import org.compiere.model.MInOutConfirm;
- 
+import org.compiere.impl.MInOut;
+import org.compiere.impl.MInOutConfirm;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+
 /**
  *	Create Confirmation From Shipment
  *	

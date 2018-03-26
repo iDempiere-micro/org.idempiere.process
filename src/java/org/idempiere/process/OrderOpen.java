@@ -18,9 +18,11 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.model.MOrder;
-import org.compiere.util.AdempiereSystemError;
- 
+import org.compiere.impl.MOrder;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereSystemError;
+
 /**
  *	Re-Open Order Process (from Closed to Completed)
  *	

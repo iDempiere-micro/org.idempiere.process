@@ -16,23 +16,15 @@
  *****************************************************************************/
 package org.idempiere.process;
 
-import java.io.File;
 import java.util.logging.Level;
 
-import org.compiere.model.MBPartner;
-import org.compiere.model.MClient;
-import org.compiere.model.MDunningLevel;
-import org.compiere.model.MDunningRun;
-import org.compiere.model.MDunningRunEntry;
-import org.compiere.model.MMailText;
-import org.compiere.model.MQuery;
-import org.compiere.model.MUser;
-import org.compiere.model.MUserMail;
-import org.compiere.model.PrintInfo;
-import org.compiere.print.MPrintFormat;
-import org.compiere.print.ReportEngine;
-import org.idempiere.util.AdempiereUserError;
-import org.compiere.util.EMail;
+import org.compiere.impl.MClient;
+import org.compiere.impl.MDunningRun;
+import org.compiere.impl.MDunningRunEntry;
+import org.compiere.impl.MMailText;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereUserError;
 
 /**
  *	Dunning Letter Print
@@ -95,7 +87,7 @@ public class DunningPrint extends SvrProcess
 		
 		//	Need to have Template
 		if (p_EMailPDF && p_R_MailText_ID == 0)
-			throw new AdempiereUserError ("@NotFound@: @R_MailText_ID@");
+			throw new AdempiereUserError("@NotFound@: @R_MailText_ID@");
 //		String subject = "";
 		MMailText mText = null;
 		if (p_EMailPDF)
@@ -114,6 +106,7 @@ public class DunningPrint extends SvrProcess
 		int count = 0;
 		int errors = 0;
 		MDunningRunEntry[] entries = run.getEntries(false);
+			/*
 		for (int i = 0; i < entries.length; i++)
 		{
 			MDunningRunEntry entry = entries[i];
@@ -246,6 +239,8 @@ public class DunningPrint extends SvrProcess
 		}
 		StringBuilder msgreturn = new StringBuilder("@Printed@=").append(count);
 		return msgreturn.toString();
+		*/
+			return null;
 	}	//	doIt
 	
 }	//	DunningPrint

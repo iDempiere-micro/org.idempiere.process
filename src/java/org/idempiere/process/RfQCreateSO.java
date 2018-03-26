@@ -19,14 +19,16 @@ package org.idempiere.process;
 import java.math.BigDecimal;
 import java.util.logging.Level;
 
-import org.compiere.model.MBPartner;
-import org.compiere.model.MOrder;
-import org.compiere.model.MOrderLine;
-import org.compiere.model.MRfQ;
-import org.compiere.model.MRfQLine;
-import org.compiere.model.MRfQLineQty;
+import org.compiere.impl.MBPartner;
+import org.compiere.impl.MOrder;
+import org.compiere.impl.MOrderLine;
+import org.compiere.impl.MRfQ;
+import org.compiere.impl.MRfQLine;
+import org.compiere.impl.MRfQLineQty;
 import org.idempiere.common.util.Env;
 
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 
 /**
  *	Create SO for RfQ.

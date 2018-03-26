@@ -18,9 +18,11 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.model.MIssue;
-import org.compiere.model.MSystem;
-import org.compiere.util.AdempiereSystemError;
+import org.compiere.impl.MIssue;
+import org.compiere.impl.MSystem;
+
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereSystemError;
 
 /**
  * 	Report System Issue

@@ -16,29 +16,14 @@
  *****************************************************************************/
 package org.idempiere.process;
 
-import java.io.File;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.logging.Level;
 
-import org.compiere.model.MClient;
-import org.compiere.model.MInvoice;
-import org.compiere.model.MMailText;
-import org.compiere.model.MQuery;
-import org.compiere.model.MUser;
-import org.compiere.model.MUserMail;
-import org.compiere.model.PrintInfo;
-import org.compiere.model.X_C_Invoice;
-import org.compiere.print.MPrintFormat;
-import org.compiere.print.ReportEngine;
-import org.compiere.print.ServerReportCtl;
-import org.idempiere.util.AdempiereUserError;
-import org.compiere.util.DB;
-import org.compiere.util.EMail;
-import org.idempiere.common.util.Env;
-import org.idempiere.common.util.Ini;
-import org.idempiere.common.util.Language;
+import org.compiere.impl.MClient;
+import org.compiere.impl.MMailText;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.*;
 
 /**
  *	Print Invoices on Paper or send PDFs
@@ -107,7 +92,7 @@ public class InvoicePrint extends SvrProcess
 	{
 		//	Need to have Template
 		if (p_EMailPDF && p_R_MailText_ID == 0)
-			throw new AdempiereUserError ("@NotFound@: @R_MailText_ID@");
+			throw new AdempiereUserError("@NotFound@: @R_MailText_ID@");
 		if (log.isLoggable(Level.INFO)) log.info ("C_BPartner_ID=" + m_C_BPartner_ID
 			+ ", C_Invoice_ID=" + m_C_Invoice_ID
 			+ ", EmailPDF=" + p_EMailPDF + ",R_MailText_ID=" + p_R_MailText_ID
@@ -212,7 +197,7 @@ public class InvoicePrint extends SvrProcess
 		sql.append(" ORDER BY i.C_Invoice_ID, pf.AD_Org_ID DESC");	//	more than 1 PF record
 		if (log.isLoggable(Level.FINE)) log.fine(sql.toString());
 
-		MPrintFormat format = null;
+		/*MPrintFormat format = null;
 		int old_AD_PrintFormat_ID = -1;
 		int old_C_Invoice_ID = -1;
 		int C_BPartner_ID = 0;
@@ -369,7 +354,8 @@ public class InvoicePrint extends SvrProcess
 			return msgreturn.toString();
 		}	
 		StringBuilder msgreturn = new StringBuilder("@Printed@=").append(count);
-		return msgreturn.toString();
+		return msgreturn.toString();*/
+		return null;
 	}	//	doIt
 
 }	//	InvoicePrint

@@ -30,13 +30,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 
-import org.compiere.model.*;
+import org.compiere.impl.*;
 import org.compiere.process.DocAction;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.compiere.util.Msg;
 import org.idempiere.common.util.Util;
 import org.idempiere.common.util.ValueNamePair;
+import org.compiere.impl.PO;
 
 /**
  *	IDEMPIERE-2100 Automate Recurring Run

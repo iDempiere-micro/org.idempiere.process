@@ -20,10 +20,12 @@ package org.idempiere.process;
 import java.util.logging.Level;
 
 import org.compiere.impexp.BankStatementMatchInfo;
-import org.compiere.model.MBankStatement;
-import org.compiere.model.MBankStatementLine;
-import org.compiere.model.MBankStatementMatcher;
-import org.compiere.model.X_I_BankStatement;
+import org.compiere.impl.MBankStatement;
+import org.compiere.impl.MBankStatementLine;
+import org.compiere.impl.MBankStatementMatcher;
+import org.compiere.impl.X_I_BankStatement;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 
 /**
  *	Bank Statement Matching

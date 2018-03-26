@@ -28,15 +28,12 @@ import java.util.logging.Level;
 
 import javax.sql.RowSet;
 
-import org.idempiere.db.CConnection;
+import org.compiere.impl.*;
 import org.compiere.interfaces.Server;
-import org.compiere.model.MReplication;
-import org.compiere.model.MReplicationLog;
-import org.compiere.model.MReplicationRun;
-import org.compiere.model.MSystem;
-import org.compiere.util.CCachedRowSet;
-import org.compiere.util.CLogger;
-import org.compiere.util.DB;
+import org.compiere.process.*;
+import org.idempiere.common.db.CConnection;
+import org.idempiere.common.util.CLogger;
+import org.idempiere.common.util.DB;
 
 /**
  * 	Local (Central) Data Replication.
@@ -48,11 +45,11 @@ import org.compiere.util.DB;
 public class ReplicationLocal extends SvrProcess
 {
 	/**	System Record				*/
-	private	MSystem				m_system = null;
+	private MSystem m_system = null;
 	/**	Replication Info			*/
-	private MReplication 		m_replication = null;
+	private MReplication m_replication = null;
 	/**	Replication Run				*/
-	private MReplicationRun 	m_replicationRun = null;
+	private MReplicationRun m_replicationRun = null;
 	/**	Test Flag					*/
 	private Boolean				m_test = Boolean.FALSE;
 	/**	Replication Flag			*/
@@ -64,7 +61,7 @@ public class ReplicationLocal extends SvrProcess
 	private Timestamp			m_replicationStart = new Timestamp (m_start);
 
 	/**	Logger						*/
-	private static CLogger		s_log = CLogger.getCLogger(ReplicationLocal.class);
+	private static CLogger s_log = CLogger.getCLogger(ReplicationLocal.class);
 
 	/**	Remote class				*/
 	private static String	REMOTE = "org.compiere.process.ReplicationRemote";
@@ -140,7 +137,7 @@ public class ReplicationLocal extends SvrProcess
 		if (log.isLoggable(Level.INFO)) log.info (AppsHost + ":" + AppsPort);
 		try
 		{
-			Server server = connection.getServer();
+			Server server = MClient.getServer();
 		//	log.fine("- ServerHome: " + serverHome);
 			if (server == null)
 				throw new Exception ("NoServer");
@@ -563,7 +560,7 @@ public class ReplicationLocal extends SvrProcess
 			}
 			//
 			rs = pstmt.executeQuery();
-			rowSet = CCachedRowSet.getRowSet(rs);
+			//rowSet = CCachedRowSet.getRowSet(rs);
 		}
 		catch (Exception ex)
 		{

@@ -18,12 +18,12 @@ import java.sql.ResultSet;
 import java.util.logging.Level;
 
 import org.compiere.Adempiere;
-import org.compiere.model.M_Element;
-import org.compiere.util.CLogMgt;
-import org.compiere.util.CLogger;
-import org.compiere.util.DB;
+import org.compiere.impl.M_Element;
+import org.compiere.process.ProcessInfo;
+import org.idempiere.common.util.*;
+
+import org.compiere.process.SvrProcess;
 import org.idempiere.common.util.Env;
-import org.compiere.util.Trx;
 
 /**
  *	Synchronize Column with Database
@@ -33,7 +33,7 @@ import org.compiere.util.Trx;
 public class SynchronizeTerminology extends SvrProcess
 {
 	/**	Static Logger	*/
-	private static CLogger	s_log	= CLogger.getCLogger (SynchronizeTerminology.class);
+	private static CLogger s_log	= CLogger.getCLogger (SynchronizeTerminology.class);
 	
 	/**
 	 *  Prepare - e.g., get Parameters.
@@ -937,7 +937,7 @@ public class SynchronizeTerminology extends SvrProcess
 	//add main method, preparing for nightly build
 	public static void main(String[] args) 
 	{
-		Adempiere.startupEnvironment(false);
+		Adempiere.getI().startupEnvironment(false);
 		CLogMgt.setLevel(Level.FINE);
 		s_log.info("Synchronize Terminology");
 		s_log.info("-----------------------");

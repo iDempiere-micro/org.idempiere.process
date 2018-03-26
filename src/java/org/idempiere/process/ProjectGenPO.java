@@ -20,13 +20,15 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.logging.Level;
 
-import org.compiere.model.MBPartner;
-import org.compiere.model.MConversionRate;
-import org.compiere.model.MOrder;
-import org.compiere.model.MOrderLine;
-import org.compiere.model.MProductPO;
-import org.compiere.model.MProject;
-import org.compiere.model.MProjectLine;
+import org.compiere.impl.MBPartner;
+import org.compiere.impl.MConversionRate;
+import org.compiere.impl.MOrder;
+import org.compiere.impl.MOrderLine;
+import org.compiere.impl.MProductPO;
+import org.compiere.impl.MProject;
+import org.compiere.impl.MProjectLine;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 import org.idempiere.common.util.Env;
 import org.compiere.util.Msg;
 

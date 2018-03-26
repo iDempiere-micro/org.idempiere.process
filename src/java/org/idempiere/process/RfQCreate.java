@@ -18,10 +18,13 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.model.MRfQ;
-import org.compiere.model.MRfQResponse;
-import org.compiere.model.MRfQTopic;
-import org.compiere.model.MRfQTopicSubscriber;
+import org.compiere.impl.MRfQ;
+import org.compiere.impl.MRfQResponse;
+import org.compiere.impl.MRfQTopic;
+import org.compiere.impl.MRfQTopicSubscriber;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 
 /**
  *	Create RfQ Response from RfQ Topic

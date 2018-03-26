@@ -5,7 +5,7 @@ import java.sql.ResultSet;
 import java.util.Properties;
 import java.util.logging.Level;
 
-import org.compiere.model.MRoleMenu;
+import org.compiere.impl.MRoleMenu;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.idempiere.common.util.DB;

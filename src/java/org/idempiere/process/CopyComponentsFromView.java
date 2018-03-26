@@ -26,13 +26,17 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.model.MTable;
-import org.compiere.model.MViewColumn;
-import org.compiere.model.MViewComponent;
-import org.compiere.model.PO;
-import org.compiere.util.AdempiereSystemError;
+import org.compiere.impl.MTable;
+import org.compiere.impl.MViewColumn;
+import org.compiere.impl.MViewComponent;
+import org.compiere.impl.PO;
 import org.idempiere.common.util.Env;
 import org.compiere.util.Msg;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereSystemError;
+
 
 /**
  *	Copy components from one view to other

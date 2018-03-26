@@ -19,17 +19,21 @@ package org.idempiere.process;
 import java.math.BigDecimal;
 import java.util.logging.Level;
 
-import org.compiere.model.MCurrency;
-import org.compiere.model.MInOut;
-import org.compiere.model.MInOutLine;
-import org.compiere.model.MInvoice;
-import org.compiere.model.MInvoiceLine;
-import org.compiere.model.MInvoicePaySchedule;
-import org.compiere.model.MOrder;
-import org.compiere.model.MOrderPaySchedule;
-import org.compiere.model.PO;
+import org.compiere.impl.MCurrency;
+import org.compiere.impl.MInOut;
+import org.compiere.impl.MInOutLine;
+import org.compiere.impl.MInvoice;
+import org.compiere.impl.MInvoiceLine;
+import org.compiere.impl.MInvoicePaySchedule;
+import org.compiere.impl.MOrder;
+import org.compiere.impl.MOrderPaySchedule;
+import org.compiere.impl.PO;
 import org.idempiere.common.util.Env;
- 
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+
+
 /**
  *	Create (Generate) Invoice from Shipment
  *	

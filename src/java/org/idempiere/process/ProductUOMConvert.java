@@ -19,12 +19,14 @@ package org.idempiere.process;
 import java.math.BigDecimal;
 import java.util.logging.Level;
 
-import org.compiere.model.MProduct;
-import org.compiere.model.MUOM;
-import org.compiere.model.MUOMConversion;
-import org.idempiere.util.AdempiereUserError;
+import org.compiere.impl.MProduct;
+import org.compiere.impl.MUOM;
+import org.compiere.impl.MUOMConversion;
 import org.idempiere.common.util.Env;
 
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereUserError;
 
 /**
  *	Product UOM Conversion

@@ -20,12 +20,14 @@ import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.logging.Level;
 
-import org.compiere.model.MRfQ;
-import org.compiere.model.MRfQLine;
-import org.compiere.model.MRfQLineQty;
-import org.compiere.model.MRfQResponse;
-import org.compiere.model.MRfQResponseLine;
-import org.compiere.model.MRfQResponseLineQty;
+import org.compiere.impl.MRfQ;
+import org.compiere.impl.MRfQLine;
+import org.compiere.impl.MRfQLineQty;
+import org.compiere.impl.MRfQResponse;
+import org.compiere.impl.MRfQResponseLine;
+import org.compiere.impl.MRfQResponseLineQty;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 import org.idempiere.common.util.Env;
 
 /**

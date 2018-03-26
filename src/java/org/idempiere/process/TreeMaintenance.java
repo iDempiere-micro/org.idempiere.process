@@ -21,15 +21,17 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.logging.Level;
 
-import org.compiere.model.MTable;
-import org.compiere.model.MTree;
-import org.compiere.model.MTree_Base;
-import org.compiere.model.MTree_Node;
-import org.compiere.model.MTree_NodeBP;
-import org.compiere.model.MTree_NodeMM;
-import org.compiere.model.MTree_NodePR;
-import org.compiere.model.PO;
-import org.compiere.util.DB;
+import org.compiere.impl.MTable;
+import org.compiere.impl.MTree;
+import org.compiere.impl.MTree_Base;
+import org.compiere.impl.MTree_Node;
+import org.compiere.impl.MTree_NodeBP;
+import org.compiere.impl.MTree_NodeMM;
+import org.compiere.impl.MTree_NodePR;
+import org.compiere.impl.PO;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.DB;
 
 /**
  *	Tree Maintenance	
@@ -190,7 +192,7 @@ public class TreeMaintenance extends SvrProcess
 				while (rs.next())
 				{
 					int Node_ID = rs.getInt(1);
-					PO rec = table.getPO(Node_ID, get_TrxName());
+					PO rec = (PO)table.getPO(Node_ID, get_TrxName());
 					rec.update_Tree(tree.getTreeType());
 				}
 			}

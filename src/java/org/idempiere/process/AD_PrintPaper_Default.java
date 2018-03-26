@@ -17,9 +17,12 @@
  *****************************************************************************/
 package org.idempiere.process;
 
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.DB;
+
 import java.util.logging.Level;
 
-import org.compiere.util.DB;
 
 /**
  * Title:	Set Current Format as Default

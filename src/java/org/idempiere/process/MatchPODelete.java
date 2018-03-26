@@ -18,9 +18,12 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.model.MMatchPO;
-import org.compiere.model.MOrderLine;
-import org.idempiere.util.AdempiereUserError;
+import org.compiere.impl.MMatchPO;
+import org.compiere.impl.MOrderLine;
+
+
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereUserError;
 
 
 /**

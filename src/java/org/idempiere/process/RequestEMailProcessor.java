@@ -35,16 +35,19 @@ import javax.mail.Session;
 import javax.mail.Store;
 
 import org.idempiere.common.exceptions.AdempiereException;
-import org.compiere.model.MAttachment;
-import org.compiere.model.MColumn;
-import org.compiere.model.MRequest;
-import org.compiere.model.MRequestType;
-import org.compiere.model.MUser;
-import org.compiere.util.DB;
-import org.compiere.util.EmailSrv;
-import org.compiere.util.EmailSrv.EmailContent;
-import org.compiere.util.EmailSrv.ProcessEmailHandle;
-import org.compiere.util.Trx;
+import org.compiere.impl.MAttachment;
+import org.compiere.impl.MColumn;
+import org.compiere.impl.MRequest;
+import org.compiere.impl.MRequestType;
+import org.compiere.impl.MUser;
+import org.compiere.webutil.EmailSrv;
+import org.compiere.webutil.EmailSrv.EmailContent;
+import org.compiere.webutil.EmailSrv.ProcessEmailHandle;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.*;
+
 
 /**
  *	Request Email Processor

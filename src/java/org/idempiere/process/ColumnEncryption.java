@@ -30,14 +30,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.logging.Level;
 
-import org.compiere.model.MColumn;
-import org.compiere.model.MTable;
-import org.idempiere.util.AdempiereUserError;
-import org.compiere.util.CacheMgt;
-import org.compiere.util.DB;
+import org.compiere.impl.MColumn;
+import org.compiere.impl.MTable;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 import org.compiere.util.DisplayType;
-import org.compiere.util.SecureEngine;
-import org.compiere.util.Trx;
+import org.idempiere.common.util.*;
 
 /**
  * Column Encryption Test

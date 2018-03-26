@@ -20,8 +20,12 @@ package org.idempiere.process;
 import java.util.List;
 import java.util.logging.Level;
 
-import org.compiere.model.MReportCube;
-import org.compiere.model.Query;
+import org.compiere.impl.MReportCube;
+import org.compiere.impl.Query;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+
 
 /*
  * Populate Fact_Acct_Summary table with pre-calculated totals of 

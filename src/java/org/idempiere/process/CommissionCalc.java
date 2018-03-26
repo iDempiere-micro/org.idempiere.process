@@ -24,17 +24,19 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.logging.Level;
 
-import org.compiere.model.MCommission;
-import org.compiere.model.MCommissionAmt;
-import org.compiere.model.MCommissionDetail;
-import org.compiere.model.MCommissionLine;
-import org.compiere.model.MCommissionRun;
-import org.compiere.model.MCurrency;
-import org.compiere.model.MUser;
-import org.compiere.util.AdempiereSystemError;
-import org.idempiere.util.AdempiereUserError;
-import org.compiere.util.DB;
+import org.compiere.impl.MCommission;
+import org.compiere.impl.MCommissionAmt;
+import org.compiere.impl.MCommissionDetail;
+import org.compiere.impl.MCommissionLine;
+import org.compiere.impl.MCommissionRun;
+import org.compiere.impl.MCurrency;
+import org.compiere.impl.MUser;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 import org.compiere.util.DisplayType;
+import org.idempiere.common.util.AdempiereSystemError;
+import org.idempiere.common.util.AdempiereUserError;
+import org.idempiere.common.util.DB;
 import org.idempiere.common.util.Language;
 
 /**
@@ -81,7 +83,7 @@ public class CommissionCalc extends SvrProcess
 			p_StartDate = new Timestamp (System.currentTimeMillis());
 		m_com = new MCommission (getCtx(), getRecord_ID(), get_TrxName());
 		if (m_com.get_ID() == 0)
-			throw new AdempiereUserError ("No Commission");
+			throw new AdempiereUserError("No Commission");
 			
 		//	Create Commission	
 		MCommissionRun comRun = new MCommissionRun (m_com);
@@ -94,7 +96,7 @@ public class CommissionCalc extends SvrProcess
 			.append(" - ").append(MCurrency.getISO_Code(getCtx(), m_com.getC_Currency_ID()));
 		comRun.setDescription(description.toString());
 		if (!comRun.save())
-			throw new AdempiereSystemError ("Could not save Commission Run");
+			throw new AdempiereSystemError("Could not save Commission Run");
 		
 		MCommissionLine[] lines = m_com.getLines();
 		for (int i = 0; i < lines.length; i++)

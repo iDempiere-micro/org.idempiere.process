@@ -24,17 +24,19 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.logging.Level;
 
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 import org.idempiere.common.exceptions.DBException;
 import org.adempiere.model.ImportValidator;
 import org.adempiere.process.ImportProcess;
-import org.compiere.model.MBPartner;
-import org.compiere.model.MBPartnerLocation;
-import org.compiere.model.MContactInterest;
-import org.compiere.model.MLocation;
-import org.compiere.model.MUser;
-import org.compiere.model.ModelValidationEngine;
-import org.compiere.model.X_I_BPartner;
-import org.compiere.util.DB;
+import org.compiere.impl.MBPartner;
+import org.compiere.impl.MBPartnerLocation;
+import org.compiere.impl.MContactInterest;
+import org.compiere.impl.MLocation;
+import org.compiere.impl.MUser;
+import org.compiere.impl.ModelValidationEngine;
+import org.compiere.impl.X_I_BPartner;
+import org.idempiere.common.util.DB;
 
 /**
  *	Import BPartners from I_BPartner

@@ -22,12 +22,14 @@ import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.util.logging.Level;
 
-import org.compiere.model.MLocation;
-import org.compiere.model.MSystem;
-import org.compiere.model.M_Registration;
-import org.idempiere.util.AdempiereUserError;
-import org.compiere.util.DB;
-import org.compiere.util.WebEnv;
+import org.compiere.impl.MLocation;
+import org.compiere.impl.MSystem;
+import org.compiere.impl.M_Registration;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.compiere.webutil.WebEnv;
+import org.idempiere.common.util.AdempiereUserError;
+import org.idempiere.common.util.DB;
 
 /**
  *	System Registration

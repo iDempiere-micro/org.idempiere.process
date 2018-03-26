@@ -24,14 +24,16 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.logging.Level;
 
-import org.compiere.model.MAccount;
-import org.compiere.model.MJournal;
-import org.compiere.model.MJournalBatch;
-import org.compiere.model.MJournalLine;
-import org.compiere.model.X_I_GLJournal;
-import org.compiere.util.CLogger;
-import org.compiere.util.DB;
-import org.compiere.util.TimeUtil;
+import org.compiere.impl.MAccount;
+import org.compiere.impl.MJournal;
+import org.compiere.impl.MJournalBatch;
+import org.compiere.impl.MJournalLine;
+import org.compiere.impl.X_I_GLJournal;
+import org.compiere.webutil.TimeUtil;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.*;
 
 /**
  *	Import GL Journal Batch/JournalLine from I_Journal

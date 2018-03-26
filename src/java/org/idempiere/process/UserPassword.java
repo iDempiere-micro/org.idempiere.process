@@ -18,9 +18,12 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.model.MSysConfig;
-import org.compiere.model.MUser;
-import org.compiere.util.Util;
+import org.compiere.impl.MSysConfig;
+import org.compiere.impl.MUser;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.*;
+
 /**
  *	Reset Password
  *	

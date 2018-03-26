@@ -19,10 +19,12 @@ package org.idempiere.process;
 import java.math.BigDecimal;
 import java.util.logging.Level;
 
-import org.compiere.model.MBankStatement;
-import org.compiere.model.MBankStatementLine;
-import org.compiere.model.MPayment;
-import org.compiere.util.DB;
+import org.compiere.impl.MBankStatement;
+import org.compiere.impl.MBankStatementLine;
+import org.compiere.impl.MPayment;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.DB;
 
 /**
  *  Copy BankStatement Lines :

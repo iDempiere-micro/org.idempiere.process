@@ -18,9 +18,11 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.model.MCostDetail;
-import org.compiere.model.MProduct;
-import org.idempiere.util.AdempiereUserError;
+import org.compiere.impl.MCostDetail;
+import org.compiere.impl.MProduct;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereUserError;
 
 /**
  * 	Create/Update Costing for Product

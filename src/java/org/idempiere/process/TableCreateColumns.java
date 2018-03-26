@@ -22,14 +22,16 @@ import java.sql.ResultSet;
 import java.sql.Types;
 import java.util.logging.Level;
 
-import org.compiere.db.AdempiereDatabase;
-import org.compiere.model.MColumn;
-import org.compiere.model.MTable;
-import org.compiere.model.M_Element;
-import org.compiere.model.PO;
-import org.compiere.util.AdempiereSystemError;
-import org.compiere.util.DB;
+import org.compiere.impl.MColumn;
+import org.compiere.impl.MTable;
+import org.compiere.impl.M_Element;
+import org.idempiere.orm.PO;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 import org.compiere.util.DisplayType;
+import org.idempiere.common.util.AdempiereSystemError;
+import org.idempiere.common.util.DB;
+import org.idempiere.icommon.db.AdempiereDatabase;
 
 
 /**

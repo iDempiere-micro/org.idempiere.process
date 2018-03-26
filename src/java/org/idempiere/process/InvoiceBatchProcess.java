@@ -18,11 +18,13 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.model.MInvoice;
-import org.compiere.model.MInvoiceBatch;
-import org.compiere.model.MInvoiceBatchLine;
-import org.compiere.model.MInvoiceLine;
-import org.idempiere.util.AdempiereUserError;
+import org.compiere.impl.MInvoice;
+import org.compiere.impl.MInvoiceBatch;
+import org.compiere.impl.MInvoiceBatchLine;
+import org.compiere.impl.MInvoiceLine;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereUserError;
 import org.compiere.util.Msg;
 
 

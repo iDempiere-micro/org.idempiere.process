@@ -21,9 +21,12 @@ import java.util.logging.Level;
 
 import org.adempiere.base.Core;
 import org.adempiere.base.IProductPricing;
-import org.compiere.model.MProject;
-import org.compiere.model.MProjectLine;
+import org.compiere.impl.MProject;
+import org.compiere.impl.MProjectLine;
 import org.compiere.util.Msg;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 
 /**
  *  Price Project Line.

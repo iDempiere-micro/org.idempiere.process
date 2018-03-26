@@ -24,18 +24,19 @@ import java.util.logging.Level;
 
 import org.adempiere.exceptions.FillMandatoryException;
 import org.compiere.model.I_C_ContactActivity;
-import org.compiere.model.MBPartner;
-import org.compiere.model.MBPartnerLocation;
-import org.compiere.model.MLocation;
-import org.compiere.model.MOpportunity;
-import org.compiere.model.MUser;
-import org.compiere.model.PO;
-import org.compiere.model.Query;
-import org.compiere.model.X_C_ContactActivity;
-import org.idempiere.util.AdempiereUserError;
-import org.compiere.util.DB;
-import org.idempiere.common.util.Env;
-import org.compiere.util.Util;
+import org.compiere.impl.MBPartner;
+import org.compiere.impl.MBPartnerLocation;
+import org.compiere.impl.MLocation;
+import org.compiere.impl.MOpportunity;
+import org.compiere.impl.MUser;
+import org.compiere.impl.PO;
+import org.compiere.impl.Query;
+import org.compiere.impl.X_C_ContactActivity;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.*;
+
 
 /**
  * 

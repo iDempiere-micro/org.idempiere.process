@@ -17,12 +17,12 @@
 
 package org.idempiere.process;
 
-import org.compiere.model.MInOut;
-import org.compiere.model.MInvoice;
-import org.compiere.model.MOrder;
-import org.compiere.model.MOrderLine;
-import org.compiere.model.MRMA;
-import org.compiere.model.MRMALine;
+import org.compiere.impl.MInOut;
+import org.compiere.impl.MInvoice;
+import org.compiere.impl.MOrder;
+import org.compiere.impl.MOrderLine;
+import org.compiere.impl.MRMA;
+import org.compiere.impl.MRMALine;
 import org.compiere.process.SvrProcess;
 
 /**

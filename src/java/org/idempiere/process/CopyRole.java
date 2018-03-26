@@ -21,10 +21,12 @@ package org.idempiere.process;
 
 import java.math.BigDecimal;
 
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 import org.idempiere.common.exceptions.AdempiereException;
 import org.compiere.model.I_AD_Role_Included;
-import org.compiere.model.MRole;
-import org.compiere.util.DB;
+import org.compiere.impl.MRole;
+import org.idempiere.common.util.DB;
 import org.idempiere.common.util.Env;
 
 

@@ -5,10 +5,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 
-import org.compiere.model.MProduct;
+import org.compiere.impl.MProduct;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
-import org.compiere.util.DB;
+import org.idempiere.common.util.DB;
 import org.idempiere.common.util.Env;
 
 

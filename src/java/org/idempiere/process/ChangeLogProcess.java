@@ -22,12 +22,14 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.logging.Level;
 
-import org.compiere.model.MChangeLog;
-import org.compiere.model.MColumn;
-import org.compiere.model.MTable;
-import org.compiere.util.DB;
+import org.compiere.impl.MChangeLog;
+import org.compiere.impl.MColumn;
+import org.compiere.impl.MTable;
 import org.compiere.util.DisplayType;
 
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.DB;
 
 /**
  *	Process Change Logs

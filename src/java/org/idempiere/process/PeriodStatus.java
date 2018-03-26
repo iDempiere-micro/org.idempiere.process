@@ -18,11 +18,12 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.model.MPeriod;
-import org.compiere.model.MPeriodControl;
-import org.idempiere.util.AdempiereUserError;
-import org.compiere.util.CacheMgt;
-import org.compiere.util.DB;
+import org.compiere.impl.MPeriod;
+import org.compiere.impl.MPeriodControl;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.*;
 
 /**
  *	Open/Close all Period (Control)

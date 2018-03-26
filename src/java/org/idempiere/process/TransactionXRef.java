@@ -18,9 +18,12 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.idempiere.util.AdempiereUserError;
-import org.compiere.util.DB;
-
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereUserError;
+import org.idempiere.common.util.DB;
+import org.idempiere.common.util.AdempiereSystemError;
+import org.idempiere.common.util.Env;
 
 /**
  *	Material Transaction Cross Reference

@@ -19,11 +19,13 @@ package org.idempiere.process;
 import java.util.List;
 
 import org.idempiere.common.exceptions.AdempiereException;
-import org.compiere.model.MSysConfig;
-import org.compiere.model.MTable;
-import org.compiere.model.MUser;
-import org.compiere.model.SystemIDs;
-import org.compiere.util.CacheMgt;
+import org.compiere.impl.MSysConfig;
+import org.compiere.impl.MTable;
+import org.compiere.impl.MUser;
+import org.compiere.util.SystemIDs;
+
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.*;
 
 /**
  *	Hash existing passwords

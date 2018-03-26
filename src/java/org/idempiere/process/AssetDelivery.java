@@ -22,15 +22,18 @@ import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.logging.Level;
 
-import org.compiere.model.MAsset;
-import org.compiere.model.MAssetDelivery;
-import org.compiere.model.MClient;
-import org.compiere.model.MMailText;
-import org.compiere.model.MProductDownload;
-import org.compiere.model.MUser;
-import org.compiere.model.MUserMail;
-import org.compiere.util.DB;
-import org.compiere.util.EMail;
+import org.compiere.impl.MAsset;
+import org.compiere.impl.MAssetDelivery;
+import org.compiere.impl.MClient;
+import org.compiere.impl.MMailText;
+import org.compiere.impl.MProductDownload;
+import org.compiere.impl.MUser;
+import org.compiere.impl.MUserMail;
+import org.compiere.webutil.EMail;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.DB;
 
 /**
  *	Deliver Assets Electronically

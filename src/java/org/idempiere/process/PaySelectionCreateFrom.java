@@ -25,12 +25,14 @@ import java.util.logging.Level;
 
 import org.idempiere.common.exceptions.AdempiereException;
 import org.idempiere.common.exceptions.DBException;
-import org.compiere.model.MPaySelection;
-import org.compiere.model.MPaySelectionLine;
-import org.compiere.model.X_C_Order;
-import org.compiere.util.DB;
+import org.compiere.impl.MPaySelection;
+import org.compiere.impl.MPaySelectionLine;
+import org.compiere.impl.X_C_Order;
 import org.idempiere.common.util.Env;
 
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.DB;
 
 /**
  *	Create Payment Selection Lines from AP Invoices

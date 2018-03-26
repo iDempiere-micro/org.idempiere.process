@@ -25,11 +25,15 @@ import java.util.logging.Level;
 
 import org.adempiere.model.ImportValidator;
 import org.adempiere.process.ImportProcess;
-import org.compiere.model.MProduct;
-import org.compiere.model.MProductPrice;
-import org.compiere.model.ModelValidationEngine;
-import org.compiere.model.X_I_Product;
-import org.compiere.util.DB;
+import org.compiere.impl.MProduct;
+import org.compiere.impl.MProductPrice;
+import org.compiere.impl.ModelValidationEngine;
+import org.compiere.impl.X_I_Product;
+
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.DB;
 
 /**
  *	Import Products from I_Product

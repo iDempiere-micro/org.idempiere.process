@@ -19,10 +19,12 @@ package org.idempiere.process;
 import java.sql.Timestamp;
 import java.util.logging.Level;
 
-import org.compiere.model.MAcctSchema;
-import org.compiere.model.MClient;
-import org.compiere.model.MWarehouse;
-import org.compiere.util.DB;
+import org.compiere.impl.MAcctSchema;
+import org.compiere.impl.MClient;
+import org.compiere.impl.MWarehouse;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.DB;
 
 
 /**

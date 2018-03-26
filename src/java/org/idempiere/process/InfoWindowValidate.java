@@ -16,7 +16,8 @@
  *****************************************************************************/
 package org.idempiere.process;
 
-import org.compiere.model.MInfoWindow;
+import org.compiere.impl.MInfoWindow;
+import org.compiere.process.SvrProcess;
 
 /**
  * 	Validate Info Window SQL

@@ -20,14 +20,16 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.logging.Level;
 
-import org.compiere.model.MFactAcct;
-import org.compiere.model.MInvoice;
-import org.compiere.model.MInvoiceTax;
-import org.compiere.model.MTaxDeclaration;
-import org.compiere.model.MTaxDeclarationAcct;
-import org.compiere.model.MTaxDeclarationLine;
-import org.compiere.util.AdempiereSystemError;
-import org.compiere.util.DB;
+import org.compiere.impl.MFactAcct;
+import org.compiere.impl.MInvoice;
+import org.compiere.impl.MInvoiceTax;
+import org.compiere.impl.MTaxDeclaration;
+import org.compiere.impl.MTaxDeclarationAcct;
+import org.compiere.impl.MTaxDeclarationLine;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereSystemError;
+import org.idempiere.common.util.DB;
 
 /**
  * 	Create Tax Declaration

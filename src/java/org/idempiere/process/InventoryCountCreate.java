@@ -26,11 +26,14 @@ import java.util.Iterator;
 import java.util.Vector;
 import java.util.logging.Level;
 
-import org.compiere.model.MInventory;
-import org.compiere.model.MInventoryLine;
-import org.compiere.model.MInventoryLineMA;
-import org.compiere.util.AdempiereSystemError;
-import org.compiere.util.DB;
+import org.compiere.impl.MInventory;
+import org.compiere.impl.MInventoryLine;
+import org.compiere.impl.MInventoryLineMA;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.DB;
+import org.idempiere.common.util.AdempiereSystemError;
 import org.idempiere.common.util.Env;
 
 
@@ -114,7 +117,7 @@ public class InventoryCountCreate extends SvrProcess
 		if (m_inventory.get_ID() == 0)
 			throw new AdempiereSystemError ("Not found: M_Inventory_ID=" + p_M_Inventory_ID);
 		if (m_inventory.isProcessed())
-			throw new AdempiereSystemError ("@M_Inventory_ID@ @Processed@");
+			throw new AdempiereSystemError("@M_Inventory_ID@ @Processed@");
 		//
 		if (p_DeleteOld)
 		{

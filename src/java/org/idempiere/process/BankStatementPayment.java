@@ -20,13 +20,15 @@ import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.logging.Level;
 
-import org.compiere.model.MBankStatement;
-import org.compiere.model.MBankStatementLine;
-import org.compiere.model.MInvoice;
-import org.compiere.model.MPayment;
-import org.compiere.model.X_I_BankStatement;
-import org.compiere.util.AdempiereSystemError;
-import org.idempiere.util.AdempiereUserError;
+import org.compiere.impl.MBankStatement;
+import org.compiere.impl.MBankStatementLine;
+import org.compiere.impl.MInvoice;
+import org.compiere.impl.MPayment;
+import org.compiere.impl.X_I_BankStatement;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereSystemError;
+import org.idempiere.common.util.AdempiereUserError;
 import org.idempiere.common.util.Env;
 
 /**
@@ -85,7 +87,7 @@ public class BankStatementPayment extends SvrProcess
 			return "--";
 		if (log.isLoggable(Level.FINE)) log.fine(ibs.toString());
 		if (ibs.getC_Invoice_ID() == 0 && ibs.getC_BPartner_ID() == 0)
-			throw new AdempiereUserError ("@NotFound@ @C_Invoice_ID@ / @C_BPartner_ID@");
+			throw new AdempiereUserError("@NotFound@ @C_Invoice_ID@ / @C_BPartner_ID@");
 		if (ibs.getC_BankAccount_ID() == 0)
 			throw new AdempiereUserError ("@NotFound@ @C_BankAccount_ID@");
 		//

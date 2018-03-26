@@ -18,10 +18,10 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.model.MDistribution;
-import org.compiere.util.AdempiereSystemError;
-import org.idempiere.util.AdempiereUserError;
-
+import org.compiere.impl.MDistribution;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereUserError;
+import org.idempiere.common.util.AdempiereSystemError;
 
 /**
  *	Verify GL Distribution

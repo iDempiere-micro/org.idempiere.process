@@ -18,10 +18,12 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.model.MInventory;
-import org.compiere.model.MInventoryLineMA;
-import org.compiere.util.AdempiereSystemError;
-import org.compiere.util.DB;
+import org.compiere.impl.MInventory;
+import org.compiere.impl.MInventoryLineMA;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereSystemError;
+import org.idempiere.common.util.DB;
 
 /**
  *	Update existing Inventory Count List with current Book value
@@ -66,7 +68,7 @@ public class InventoryCountUpdate extends SvrProcess
 		if (log.isLoggable(Level.INFO)) log.info("M_Inventory_ID=" + p_M_Inventory_ID);
 		MInventory inventory = new MInventory (getCtx(), p_M_Inventory_ID, get_TrxName());
 		if (inventory.get_ID() == 0)
-			throw new AdempiereSystemError ("Not found: M_Inventory_ID=" + p_M_Inventory_ID);
+			throw new AdempiereSystemError("Not found: M_Inventory_ID=" + p_M_Inventory_ID);
 
 		//	Multiple Lines for one item
 		StringBuilder sql = new StringBuilder("UPDATE M_InventoryLine SET IsActive='N' ")

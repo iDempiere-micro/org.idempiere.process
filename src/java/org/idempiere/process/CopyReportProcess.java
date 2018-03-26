@@ -17,8 +17,10 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 import org.idempiere.common.exceptions.AdempiereException;
-import org.compiere.model.MProcess;
+import org.compiere.impl.MProcess;
 import org.compiere.util.Msg;
 
 /**

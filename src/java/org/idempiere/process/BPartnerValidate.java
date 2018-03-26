@@ -22,12 +22,14 @@ import java.util.Iterator;
 import java.util.logging.Level;
 
 import org.compiere.model.I_C_BPartner;
-import org.compiere.model.MBPartner;
-import org.compiere.model.MInvoice;
-import org.compiere.model.MPayment;
-import org.compiere.model.Query;
-import org.idempiere.util.AdempiereUserError;
+import org.compiere.impl.MBPartner;
+import org.compiere.impl.MInvoice;
+import org.compiere.impl.MPayment;
+import org.compiere.impl.Query;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 import org.compiere.util.Msg;
+import org.idempiere.common.util.AdempiereUserError;
 
 
 /**
@@ -74,7 +76,7 @@ public class BPartnerValidate extends SvrProcess
 	{
 		if (log.isLoggable(Level.INFO)) log.info("C_BPartner_ID=" + p_C_BPartner_ID + ", C_BP_Group_ID=" + p_C_BP_Group_ID); 
 		if (p_C_BPartner_ID == 0 && p_C_BP_Group_ID == 0)
-			throw new AdempiereUserError ("No Business Partner/Group selected");
+			throw new AdempiereUserError("No Business Partner/Group selected");
 		
 		if (p_C_BP_Group_ID == 0)
 		{

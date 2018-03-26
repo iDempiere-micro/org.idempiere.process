@@ -24,12 +24,16 @@ package org.idempiere.process;
 import java.math.BigDecimal;
 import java.util.logging.Level;
 
-import org.compiere.model.MProduct;
-import org.compiere.model.MProduction;
-import org.compiere.model.MProject;
-import org.compiere.model.MProjectLine;
+import org.compiere.impl.MProduct;
+import org.compiere.impl.MProduction;
+import org.compiere.impl.MProject;
+import org.compiere.impl.MProjectLine;
 import org.idempiere.common.util.Env;
 import org.compiere.util.Msg;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+
 
 /**
  *  Generate Production from Project.

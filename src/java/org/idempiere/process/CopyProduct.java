@@ -4,13 +4,15 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Level;
 
-import org.compiere.model.MBPartnerProduct;
-import org.compiere.model.MProductDownload;
-import org.compiere.model.MProductPrice;
-import org.compiere.model.Query;
-import org.compiere.model.X_M_RelatedProduct;
-import org.compiere.model.X_M_Replenish;
-import org.compiere.model.X_M_Substitute;
+import org.compiere.impl.MBPartnerProduct;
+import org.compiere.impl.MProductDownload;
+import org.compiere.impl.MProductPrice;
+import org.compiere.impl.Query;
+import org.compiere.impl.X_M_RelatedProduct;
+import org.compiere.impl.X_M_Replenish;
+import org.compiere.impl.X_M_Substitute;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 
 /**
  * Process that copies product information such as substitutes, related, prices, downloads

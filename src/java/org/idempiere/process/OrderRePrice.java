@@ -19,10 +19,12 @@ package org.idempiere.process;
 import java.math.BigDecimal;
 import java.util.logging.Level;
 
-import org.compiere.model.MInvoice;
-import org.compiere.model.MInvoiceLine;
-import org.compiere.model.MOrder;
-import org.compiere.model.MOrderLine;
+import org.compiere.impl.MInvoice;
+import org.compiere.impl.MInvoiceLine;
+import org.compiere.impl.MOrder;
+import org.compiere.impl.MOrderLine;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 import org.idempiere.common.util.Env;
 
 /**

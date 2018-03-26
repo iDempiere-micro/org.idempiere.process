@@ -19,10 +19,12 @@ package org.idempiere.process;
 import java.io.File;
 import java.util.logging.Level;
 
-import org.compiere.model.MClient;
-import org.compiere.model.MStore;
+import org.compiere.impl.MClient;
+import org.compiere.impl.MStore;
 import org.idempiere.common.util.Env;
 import org.idempiere.common.util.Ini;
+
+import org.compiere.process.SvrProcess;
 
 /**
  *	Client EMail Test
@@ -60,7 +62,7 @@ public class EMailTest extends SvrProcess
 		addLog(0, null, null, msglog.toString());
 		
 		//	Test Client DocumentDir
-		if (!Ini.isClient())
+		if (!Ini.getIni().isClient())
 		{
 			String documentDir = client.getDocumentDir();
 			if (documentDir == null || documentDir.length() == 0)

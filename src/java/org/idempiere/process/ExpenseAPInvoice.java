@@ -21,14 +21,17 @@ import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.logging.Level;
 
-import org.compiere.model.MBPartner;
-import org.compiere.model.MDocType;
-import org.compiere.model.MInvoice;
-import org.compiere.model.MInvoiceLine;
-import org.compiere.model.MTimeExpense;
-import org.compiere.model.MTimeExpenseLine;
-import org.compiere.util.DB;
+import org.compiere.impl.MBPartner;
+import org.compiere.impl.MDocType;
+import org.compiere.impl.MInvoice;
+import org.compiere.impl.MInvoiceLine;
+import org.compiere.impl.MTimeExpense;
+import org.compiere.impl.MTimeExpenseLine;
+import org.compiere.process.DocAction;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 import org.compiere.util.DisplayType;
+import org.idempiere.common.util.DB;
 import org.idempiere.common.util.Env;
 import org.compiere.util.Msg;
 

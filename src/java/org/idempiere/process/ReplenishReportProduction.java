@@ -26,32 +26,35 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 
 import org.adempiere.base.Core;
-import org.compiere.model.MBPartner;
-import org.compiere.model.MClient;
-import org.compiere.model.MDocType;
-import org.compiere.model.MLocator;
-import org.compiere.model.MLocatorType;
-import org.compiere.model.MMovement;
-import org.compiere.model.MMovementLine;
-import org.compiere.model.MOrder;
-import org.compiere.model.MOrderLine;
-import org.compiere.model.MOrg;
-import org.compiere.model.MProduct;
-import org.compiere.model.MProduction;
-import org.compiere.model.MReplenish;
-import org.compiere.model.MRequisition;
-import org.compiere.model.MRequisitionLine;
-import org.compiere.model.MStorageOnHand;
-import org.compiere.model.MWarehouse;
-import org.compiere.model.X_T_Replenish;
-import org.compiere.util.AdempiereSystemError;
-import org.idempiere.util.AdempiereUserError;
-import org.compiere.util.DB;
+import org.compiere.impl.MBPartner;
+import org.compiere.impl.MClient;
+import org.compiere.impl.MDocType;
+import org.compiere.impl.MLocator;
+import org.compiere.impl.MLocatorType;
+import org.compiere.impl.MMovement;
+import org.compiere.impl.MMovementLine;
+import org.compiere.impl.MOrder;
+import org.compiere.impl.MOrderLine;
+import org.compiere.impl.MOrg;
+import org.compiere.impl.MProduct;
+import org.compiere.impl.MProduction;
+import org.compiere.impl.MReplenish;
+import org.compiere.impl.MRequisition;
+import org.compiere.impl.MRequisitionLine;
+import org.compiere.impl.MStorageOnHand;
+import org.compiere.impl.MWarehouse;
+import org.compiere.impl.X_T_Replenish;
 import org.idempiere.common.util.Env;
 import org.compiere.util.Msg;
 import org.compiere.util.ReplenishInterface;
-import org.eevolution.model.MDDOrder;
-import org.eevolution.model.MDDOrderLine;
+import org.eevolution.impl.MDDOrder;
+import org.eevolution.impl.MDDOrderLine;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereUserError;
+import org.idempiere.common.util.DB;
+import org.idempiere.common.util.AdempiereSystemError;
 
 /**
  *	Replenishment Report

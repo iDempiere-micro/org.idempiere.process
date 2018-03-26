@@ -35,10 +35,10 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.logging.Level;
 
-import org.compiere.model.MBankAccount;
-import org.compiere.model.MCash;
-import org.compiere.model.MCashBook;
-import org.compiere.model.MCashLine;
+import org.compiere.impl.MBankAccount;
+import org.compiere.impl.MCash;
+import org.compiere.impl.MCashBook;
+import org.compiere.impl.MCashLine;
 import org.compiere.process.DocAction;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;

@@ -24,19 +24,20 @@ import java.util.logging.Level;
 
 import org.adempiere.exceptions.NoVendorForProductException;
 import org.apache.commons.collections.keyvalue.MultiKey;
-import org.compiere.model.MBPartner;
-import org.compiere.model.MCharge;
-import org.compiere.model.MOrder;
-import org.compiere.model.MOrderLine;
-import org.compiere.model.MProduct;
-import org.compiere.model.MProductPO;
-import org.compiere.model.MRequisition;
-import org.compiere.model.MRequisitionLine;
-import org.compiere.model.POResultSet;
-import org.compiere.model.Query;
-import org.idempiere.util.AdempiereUserError;
-import org.compiere.util.DB;
+import org.compiere.impl.MBPartner;
+import org.compiere.impl.MCharge;
+import org.compiere.impl.MOrder;
+import org.compiere.impl.MOrderLine;
+import org.compiere.impl.MProduct;
+import org.compiere.impl.MProductPO;
+import org.compiere.impl.MRequisition;
+import org.compiere.impl.MRequisitionLine;
+import org.compiere.impl.POResultSet;
+import org.compiere.impl.Query;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 import org.compiere.util.Msg;
+import org.idempiere.common.util.AdempiereUserError;
 
 /**
  * 	Create PO from Requisition 
@@ -265,7 +266,7 @@ public class RequisitionPOCreate extends SvrProcess
 		}
 		finally
 		{
-			DB.close(rs); rs = null;
+			POResultSet.close(rs); rs = null;
 		}
 		closeOrder();
 		return "";

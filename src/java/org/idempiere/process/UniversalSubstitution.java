@@ -4,9 +4,11 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
 
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 import org.idempiere.common.exceptions.AdempiereException;
-import org.compiere.model.MProductBOM;
-import org.compiere.model.Query;
+import org.compiere.impl.MProductBOM;
+import org.compiere.impl.Query;
 
 public class UniversalSubstitution extends SvrProcess {
 

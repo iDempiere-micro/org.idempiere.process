@@ -21,15 +21,15 @@ import java.sql.ResultSet;
 import java.util.Properties;
 import java.util.logging.Level;
 
+import org.compiere.process.ProcessInfo;
 import org.idempiere.common.exceptions.AdempiereException;
 import org.compiere.Adempiere;
-import org.compiere.model.MClient;
-import org.compiere.model.MSequence;
-import org.compiere.util.CLogMgt;
-import org.compiere.util.CLogger;
-import org.compiere.util.DB;
+import org.compiere.impl.MClient;
+import org.compiere.impl.MSequence;
+import org.idempiere.common.util.*;
+
+import org.compiere.process.SvrProcess;
 import org.idempiere.common.util.Env;
-import org.compiere.util.Trx;
 
 /**
  *	System + Document Sequence Check
@@ -40,7 +40,7 @@ import org.compiere.util.Trx;
 public class SequenceCheck extends SvrProcess
 {
 	/**	Static Logger	*/
-	private static CLogger	s_log	= CLogger.getCLogger (SequenceCheck.class);
+	private static CLogger s_log	= CLogger.getCLogger (SequenceCheck.class);
 	
 	/**
 	 *  Prepare - e.g., get Parameters.
@@ -281,7 +281,7 @@ public class SequenceCheck extends SvrProcess
 	//add main method, preparing for nightly build
 	public static void main(String[] args) 
 	{
-		Adempiere.startupEnvironment(false);
+		Adempiere.getI().startupEnvironment(false);
 		CLogMgt.setLevel(Level.FINE);
 		s_log.info("Sequence Check");
 		s_log.info("--------------");

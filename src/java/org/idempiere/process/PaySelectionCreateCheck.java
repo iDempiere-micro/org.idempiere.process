@@ -19,13 +19,15 @@ package org.idempiere.process;
 import java.util.ArrayList;
 import java.util.logging.Level;
 
-import org.compiere.model.MBPartner;
-import org.compiere.model.MPaySelection;
-import org.compiere.model.MPaySelectionCheck;
-import org.compiere.model.MPaySelectionLine;
-import org.compiere.model.X_C_Order;
-import org.idempiere.util.AdempiereUserError;
- 
+import org.compiere.impl.MBPartner;
+import org.compiere.impl.MPaySelection;
+import org.compiere.impl.MPaySelectionCheck;
+import org.compiere.impl.MPaySelectionLine;
+import org.compiere.impl.X_C_Order;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereUserError;
+
 
 /**
  *	Create Checks from Payment Selection Line

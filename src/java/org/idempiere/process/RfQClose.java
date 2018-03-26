@@ -18,9 +18,11 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.model.MRfQ;
-import org.compiere.model.MRfQResponse;
- 
+import org.compiere.impl.MRfQ;
+import org.compiere.impl.MRfQResponse;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+
 
 /**
  *	Close RfQ and Responses	

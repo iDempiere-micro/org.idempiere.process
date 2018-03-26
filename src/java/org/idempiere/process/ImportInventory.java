@@ -22,28 +22,28 @@ import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.logging.Level;
 
+import org.compiere.process.DocAction;
+import org.compiere.process.DocumentEngine;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 import org.idempiere.common.exceptions.AdempiereException;
 import org.adempiere.model.ImportValidator;
 import org.adempiere.process.ImportProcess;
 import org.compiere.model.I_C_DocType;
-import org.compiere.model.MAcctSchema;
-import org.compiere.model.MAttributeSet;
-import org.compiere.model.MAttributeSetInstance;
-import org.compiere.model.MCost;
-import org.compiere.model.MInventory;
-import org.compiere.model.MInventoryLine;
-import org.compiere.model.MProduct;
-import org.compiere.model.MProductCategoryAcct;
-import org.compiere.model.ModelValidationEngine;
-import org.compiere.model.PO;
-import org.compiere.model.X_I_Inventory;
-import org.idempiere.util.AdempiereUserError;
-import org.compiere.util.CLogger;
-import org.compiere.util.DB;
-import org.idempiere.common.util.Env;
+import org.compiere.impl.MAcctSchema;
+import org.compiere.impl.MAttributeSet;
+import org.compiere.impl.MAttributeSetInstance;
+import org.compiere.impl.MCost;
+import org.compiere.impl.MInventory;
+import org.compiere.impl.MInventoryLine;
+import org.compiere.impl.MProduct;
+import org.compiere.impl.MProductCategoryAcct;
+import org.compiere.impl.ModelValidationEngine;
+import org.idempiere.orm.PO;
+import org.compiere.impl.X_I_Inventory;
+import org.idempiere.common.util.*;
 import org.compiere.util.Msg;
-import org.compiere.util.TimeUtil;
-import org.compiere.util.ValueNamePair;
+import org.compiere.webutil.TimeUtil;
 
 /**
  *	Import Physical Inventory from I_Inventory
@@ -469,7 +469,7 @@ public class ImportInventory extends SvrProcess implements ImportProcess
 			}
 			
 			if (costingDoc != null) {
-				if (!DocumentEngine.processIt(costingDoc, DocAction.ACTION_Complete)) 
+				if (!DocumentEngine.processIt(costingDoc, DocAction.ACTION_Complete))
 				{
 					StringBuilder msg = new StringBuilder();
 					I_C_DocType docType = costingDoc.getC_DocType();

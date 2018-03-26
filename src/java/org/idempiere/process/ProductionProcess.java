@@ -5,14 +5,17 @@ import java.util.List;
 import java.util.logging.Level;
 
 import org.compiere.model.I_M_ProductionPlan;
-import org.compiere.model.MProduction;
-import org.compiere.model.MProductionLine;
-import org.compiere.model.MProductionPlan;
-import org.compiere.model.Query;
-import org.idempiere.util.AdempiereUserError;
+import org.compiere.impl.MProduction;
+import org.compiere.impl.MProductionLine;
+import org.compiere.impl.MProductionPlan;
+import org.compiere.impl.Query;
+import org.compiere.process.ProcessInfo;
 import org.idempiere.common.util.Env;
 import org.compiere.wf.MWorkflow;
 
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereUserError;
 
 /**
  * 

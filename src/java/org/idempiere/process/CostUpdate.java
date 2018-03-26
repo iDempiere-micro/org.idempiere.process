@@ -26,20 +26,20 @@ import java.util.logging.Level;
 
 import org.compiere.model.I_C_DocType;
 import org.compiere.model.I_M_Inventory;
-import org.compiere.model.MAcctSchema;
-import org.compiere.model.MClient;
-import org.compiere.model.MCost;
-import org.compiere.model.MCostElement;
-import org.compiere.model.MDocType;
-import org.compiere.model.MInventory;
-import org.compiere.model.MInventoryLine;
-import org.compiere.model.MProduct;
-import org.compiere.util.AdempiereSystemError;
-import org.idempiere.util.AdempiereUserError;
-import org.compiere.util.DB;
-import org.idempiere.common.util.Env;
+import org.compiere.impl.MAcctSchema;
+import org.compiere.impl.MClient;
+import org.compiere.impl.MCost;
+import org.compiere.impl.MCostElement;
+import org.compiere.impl.MDocType;
+import org.compiere.impl.MInventory;
+import org.compiere.impl.MInventoryLine;
+import org.compiere.impl.MProduct;
+import org.compiere.process.DocAction;
+import org.compiere.process.DocumentEngine;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.*;
 import org.compiere.util.Msg;
-import org.compiere.util.Util;
 
 /**
  * 	Standard Cost Update
@@ -129,10 +129,10 @@ public class CostUpdate extends SvrProcess
 		{
 			return "-";
 		}
-		if (!Util.isEmpty(p_SetStandardCostTo)) 
+		if (!Util.isEmpty(p_SetStandardCostTo))
 		{
 			if (p_C_DocType_ID <= 0)
-				throw new AdempiereUserError ("@FillMandatory@  @C_DocType_ID@");
+				throw new AdempiereUserError("@FillMandatory@  @C_DocType_ID@");
 			else
 				m_docType = MDocType.get(getCtx(), p_C_DocType_ID);
 		}
@@ -320,7 +320,7 @@ public class CostUpdate extends SvrProcess
 					line.saveEx();
 				}
 				
-				if (!DocumentEngine.processIt(inventoryDoc, DocAction.ACTION_Complete)) 
+				if (!DocumentEngine.processIt(inventoryDoc, DocAction.ACTION_Complete))
 				{
 					StringBuilder msg = new StringBuilder();
 					msg.append(Msg.getMsg(getCtx(), "ProcessFailed")).append(": ");

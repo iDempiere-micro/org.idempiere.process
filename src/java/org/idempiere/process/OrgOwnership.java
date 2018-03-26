@@ -19,8 +19,10 @@ package org.idempiere.process;
 import java.math.BigDecimal;
 import java.util.logging.Level;
 
-import org.compiere.util.DB;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 import org.compiere.util.Msg;
+import org.idempiere.common.util.DB;
 
 /**
  *	Org Ownership Process

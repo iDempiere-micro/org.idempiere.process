@@ -18,11 +18,12 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.model.MField;
-import org.compiere.model.MTab;
-import org.idempiere.util.AdempiereUserError;
-import org.compiere.util.DB;
-
+import org.compiere.impl.MField;
+import org.compiere.impl.MTab;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereUserError;
+import org.idempiere.common.util.DB;
 
 /**
  *	Copy Tab Fields

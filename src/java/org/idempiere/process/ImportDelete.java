@@ -19,9 +19,13 @@ package org.idempiere.process;
 import java.math.BigDecimal;
 import java.util.logging.Level;
 
-import org.compiere.model.MTable;
-import org.compiere.util.DB;
+import org.compiere.impl.MTable;
 import org.compiere.util.Msg;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.DB;
+
 
 /**
  *	Delete Data in Import Table

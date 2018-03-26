@@ -24,12 +24,12 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 
 import org.compiere.model.I_C_InvoiceLine;
-import org.compiere.model.MInOut;
-import org.compiere.model.MInOutLine;
-import org.compiere.model.MInvoiceLine;
-import org.compiere.model.MRMA;
-import org.compiere.model.MRMALine;
-import org.compiere.model.Query;
+import org.compiere.impl.MInOut;
+import org.compiere.impl.MInOutLine;
+import org.compiere.impl.MInvoiceLine;
+import org.compiere.impl.MRMA;
+import org.compiere.impl.MRMALine;
+import org.compiere.impl.Query;
 import org.compiere.process.DocAction;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;

@@ -21,10 +21,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.logging.Level;
 
-import org.compiere.model.MInOutLineConfirm;
-import org.compiere.model.X_I_InOutLineConfirm;
-import org.compiere.util.DB;
+import org.compiere.impl.MInOutLineConfirm;
+import org.compiere.impl.X_I_InOutLineConfirm;
 
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.DB;
 
 /**
  *	Import Confirmations

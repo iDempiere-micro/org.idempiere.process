@@ -21,15 +21,17 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.logging.Level;
 
-import org.compiere.model.MBPartner;
-import org.compiere.model.MInvoice;
-import org.compiere.model.MInvoiceLine;
-import org.compiere.model.MRequest;
-import org.compiere.model.MRequestType;
-import org.compiere.model.MRequestUpdate;
-import org.compiere.util.AdempiereSystemError;
-import org.compiere.util.DB;
+import org.compiere.impl.MBPartner;
+import org.compiere.impl.MInvoice;
+import org.compiere.impl.MInvoiceLine;
+import org.compiere.impl.MRequest;
+import org.compiere.impl.MRequestType;
+import org.compiere.impl.MRequestUpdate;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 import org.compiere.util.Msg;
+import org.idempiere.common.util.AdempiereSystemError;
+import org.idempiere.common.util.DB;
 
 /**
  * 	Create Invoices for Requests

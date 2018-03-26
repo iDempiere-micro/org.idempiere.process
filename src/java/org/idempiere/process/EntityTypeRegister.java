@@ -18,9 +18,10 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.model.MEntityType;
-import org.compiere.util.AdempiereSystemError;
-import org.idempiere.util.AdempiereUserError;
+import org.compiere.impl.MEntityType;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereUserError;
+import org.idempiere.common.util.AdempiereSystemError;
 
 /**
  * 	Register Entity Type

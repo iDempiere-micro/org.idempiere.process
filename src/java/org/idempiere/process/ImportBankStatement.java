@@ -22,11 +22,13 @@ import java.sql.ResultSet;
 import java.util.Properties;
 import java.util.logging.Level;
 
-import org.compiere.model.MBankAccount;
-import org.compiere.model.MBankStatement;
-import org.compiere.model.MBankStatementLine;
-import org.compiere.model.X_I_BankStatement;
-import org.compiere.util.DB;
+import org.compiere.impl.MBankAccount;
+import org.compiere.impl.MBankStatement;
+import org.compiere.impl.MBankStatementLine;
+import org.compiere.impl.X_I_BankStatement;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.DB;
 import org.idempiere.common.util.Env;
 
 /**

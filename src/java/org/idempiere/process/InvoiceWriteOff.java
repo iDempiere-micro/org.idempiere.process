@@ -22,13 +22,18 @@ import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.logging.Level;
 
-import org.compiere.model.MAllocationHdr;
-import org.compiere.model.MAllocationLine;
-import org.compiere.model.MInvoice;
-import org.compiere.model.MPayment;
-import org.idempiere.util.AdempiereUserError;
-import org.compiere.util.DB;
+import org.compiere.impl.MAllocationHdr;
+import org.compiere.impl.MAllocationLine;
+import org.compiere.impl.MInvoice;
+import org.compiere.impl.MPayment;
+import org.compiere.process.DocAction;
 import org.idempiere.common.util.Env;
+
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereUserError;
+import org.idempiere.common.util.DB;
+
 
 /**
  *	Write-off Open Invoices

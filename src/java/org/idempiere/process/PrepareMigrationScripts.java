@@ -40,7 +40,7 @@ import java.util.Scanner;
 import java.util.logging.Level;
 
 import org.compiere.Adempiere;
-import org.compiere.model.MSequence;
+import org.compiere.impl.MSequence;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.idempiere.common.util.DB;

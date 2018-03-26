@@ -19,10 +19,12 @@ package org.idempiere.process;
 import java.math.BigDecimal;
 import java.util.logging.Level;
 
-import org.compiere.model.MAcctSchema;
-import org.compiere.model.MAcctSchemaDefault;
-import org.compiere.util.AdempiereSystemError;
-import org.compiere.util.DB;
+import org.compiere.impl.MAcctSchema;
+import org.compiere.impl.MAcctSchemaDefault;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.idempiere.common.util.AdempiereSystemError;
+import org.idempiere.common.util.DB;
 
 /**
  * 	Add or Copy Acct Schema Default Accounts

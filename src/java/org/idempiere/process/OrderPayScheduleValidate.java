@@ -19,8 +19,10 @@ package org.idempiere.process;
 import java.math.BigDecimal;
 import java.util.logging.Level;
 
-import org.compiere.model.MOrder;
-import org.compiere.model.MOrderPaySchedule;
+import org.compiere.impl.MOrder;
+import org.compiere.impl.MOrderPaySchedule;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
 import org.idempiere.common.util.Env;
 import org.compiere.util.Msg;
 
