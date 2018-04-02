@@ -25,7 +25,7 @@ import org.compiere.model.I_C_BPartner;
 import org.compiere.impl.MBPartner;
 import org.compiere.impl.MInvoice;
 import org.compiere.impl.MPayment;
-import org.compiere.impl.Query;
+import org.compiere.orm.Query;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.compiere.util.Msg;

@@ -35,7 +35,7 @@ import java.util.logging.Level;
 import org.compiere.impl.MCity;
 import org.compiere.impl.MCurrency;
 import org.compiere.impl.MSetup;
-import org.compiere.impl.MSysConfig;
+import org.compiere.orm.MSysConfig;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.compiere.webutil.EMail;

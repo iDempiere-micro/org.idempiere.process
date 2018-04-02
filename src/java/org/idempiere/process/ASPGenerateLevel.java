@@ -33,7 +33,7 @@ import java.util.Enumeration;
 import java.util.logging.Level;
 
 import org.compiere.impl.MClientInfo;
-import org.compiere.impl.MColumn;
+import org.compiere.orm.MColumn;
 import org.compiere.impl.MField;
 import org.compiere.impl.MForm;
 import org.compiere.impl.MMenu;

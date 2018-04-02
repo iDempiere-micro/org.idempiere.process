@@ -22,7 +22,7 @@ import java.sql.Timestamp;
 import java.util.logging.Level;
 
 import org.compiere.impl.MBPartner;
-import org.compiere.impl.MDocType;
+import org.compiere.orm.MDocType;
 import org.compiere.impl.MInvoice;
 import org.compiere.impl.MInvoiceLine;
 import org.compiere.impl.MTimeExpense;

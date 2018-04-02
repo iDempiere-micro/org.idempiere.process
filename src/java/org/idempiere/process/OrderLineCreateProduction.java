@@ -19,7 +19,7 @@ package org.idempiere.process;
 import java.sql.Timestamp;
 import java.util.logging.Level;
 
-import org.compiere.impl.MDocType;
+import org.compiere.orm.MDocType;
 import org.compiere.impl.MOrder;
 import org.compiere.impl.MOrderLine;
 import org.compiere.impl.MProduct;

@@ -22,7 +22,7 @@ import java.util.logging.Level;
 import org.compiere.impl.MBPartner;
 import org.compiere.impl.MCommission;
 import org.compiere.impl.MCommissionRun;
-import org.compiere.impl.MDocType;
+import org.compiere.orm.MDocType;
 import org.compiere.impl.MInvoice;
 import org.compiere.impl.MInvoiceLine;
 import org.compiere.process.ProcessInfoParameter;

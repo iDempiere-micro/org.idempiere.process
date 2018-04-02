@@ -19,8 +19,8 @@ package org.idempiere.process;
 import java.util.List;
 
 import org.idempiere.common.exceptions.AdempiereException;
-import org.compiere.impl.MSysConfig;
-import org.compiere.impl.MTable;
+import org.compiere.orm.MSysConfig;
+import org.compiere.orm.MTable;
 import org.compiere.impl.MUser;
 import org.compiere.util.SystemIDs;
 

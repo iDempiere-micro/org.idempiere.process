@@ -29,7 +29,7 @@ import org.compiere.impl.MInOutLine;
 import org.compiere.impl.MInvoiceLine;
 import org.compiere.impl.MRMA;
 import org.compiere.impl.MRMALine;
-import org.compiere.impl.Query;
+import org.compiere.orm.Query;
 import org.compiere.process.DocAction;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;

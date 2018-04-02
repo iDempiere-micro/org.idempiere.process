@@ -38,8 +38,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Level;
 
-import org.adempiere.model.GenericPO;
-import org.compiere.impl.MTable;
+import org.compiere.orm.GenericPO;
+import org.compiere.orm.MTable;
 import org.compiere.impl.X_AD_HouseKeeping;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;

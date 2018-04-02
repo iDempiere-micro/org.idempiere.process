@@ -8,7 +8,7 @@ import org.compiere.model.I_M_ProductionPlan;
 import org.compiere.impl.MProduction;
 import org.compiere.impl.MProductionLine;
 import org.compiere.impl.MProductionPlan;
-import org.compiere.impl.Query;
+import org.compiere.orm.Query;
 import org.compiere.process.ProcessInfo;
 import org.idempiere.common.util.Env;
 import org.compiere.wf.MWorkflow;

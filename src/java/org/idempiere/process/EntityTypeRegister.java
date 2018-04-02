@@ -18,7 +18,7 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.impl.MEntityType;
+import org.compiere.orm.MEntityType;
 import org.compiere.process.SvrProcess;
 import org.idempiere.common.util.AdempiereUserError;
 import org.idempiere.common.util.AdempiereSystemError;

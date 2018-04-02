@@ -25,7 +25,7 @@ import org.compiere.process.ProcessInfo;
 import org.idempiere.common.exceptions.AdempiereException;
 import org.compiere.Adempiere;
 import org.compiere.impl.MClient;
-import org.compiere.impl.MSequence;
+import org.compiere.orm.MSequence;
 import org.idempiere.common.util.*;
 
 import org.compiere.process.SvrProcess;

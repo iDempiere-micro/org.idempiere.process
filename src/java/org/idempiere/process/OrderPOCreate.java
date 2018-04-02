@@ -25,7 +25,7 @@ import java.util.logging.Level;
 import org.compiere.impl.MBPartner;
 import org.compiere.impl.MOrder;
 import org.compiere.impl.MOrderLine;
-import org.compiere.impl.MOrgInfo;
+import org.compiere.orm.MOrgInfo;
 import org.compiere.util.Msg;
 
 import org.compiere.process.ProcessInfoParameter;

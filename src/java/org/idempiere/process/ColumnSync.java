@@ -22,8 +22,8 @@ import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
 import java.util.logging.Level;
 
-import org.compiere.impl.MColumn;
-import org.compiere.impl.MTable;
+import org.compiere.orm.MColumn;
+import org.compiere.orm.MTable;
 
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;

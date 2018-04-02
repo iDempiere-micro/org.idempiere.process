@@ -27,7 +27,7 @@ import org.compiere.impl.MProduct;
 import org.compiere.impl.MStorageOnHand;
 import org.compiere.impl.MStorageReservation;
 import org.compiere.impl.MTransaction;
-import org.compiere.impl.Query;
+import org.compiere.orm.Query;
 import org.compiere.impl.X_M_Production;
 import org.compiere.impl.X_M_ProductionLine;
 import org.compiere.impl.X_M_ProductionPlan;

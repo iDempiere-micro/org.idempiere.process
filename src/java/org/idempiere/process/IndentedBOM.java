@@ -26,7 +26,7 @@ import org.compiere.impl.MAcctSchema;
 import org.compiere.impl.MCost;
 import org.compiere.impl.MProduct;
 import org.compiere.impl.MProductBOM;
-import org.compiere.impl.Query;
+import org.compiere.orm.Query;
 import org.compiere.impl.X_T_BOM_Indented;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;

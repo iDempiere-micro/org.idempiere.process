@@ -22,7 +22,7 @@ import java.sql.ResultSet;
 import java.util.Properties;
 import java.util.logging.Level;
 
-import org.compiere.impl.MDocType;
+import org.compiere.orm.MDocType;
 import org.compiere.impl.MPeriodControl;
 import org.compiere.process.SvrProcess;
 import org.idempiere.common.util.CLogger;

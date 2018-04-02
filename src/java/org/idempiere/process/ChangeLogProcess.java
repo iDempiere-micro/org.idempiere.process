@@ -23,8 +23,8 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 
 import org.compiere.impl.MChangeLog;
-import org.compiere.impl.MColumn;
-import org.compiere.impl.MTable;
+import org.compiere.orm.MColumn;
+import org.compiere.orm.MTable;
 import org.compiere.util.DisplayType;
 
 import org.compiere.process.ProcessInfoParameter;

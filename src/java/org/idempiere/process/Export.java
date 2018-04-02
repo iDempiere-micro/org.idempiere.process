@@ -41,10 +41,10 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.compiere.impl.MClient;
-import org.compiere.impl.MColumn;
+import org.compiere.orm.MColumn;
 import org.compiere.impl.MEXPFormat;
 import org.compiere.impl.MEXPFormatLine;
-import org.compiere.impl.MTable;
+import org.compiere.orm.MTable;
 import org.idempiere.orm.PO;
 import org.compiere.impl.X_EXP_FormatLine;
 import org.compiere.process.ProcessInfoParameter;

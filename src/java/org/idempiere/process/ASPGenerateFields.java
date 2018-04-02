@@ -31,7 +31,7 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.impl.MColumn;
+import org.compiere.orm.MColumn;
 import org.compiere.impl.MField;
 import org.compiere.impl.MProcess;
 import org.compiere.impl.MProcessPara;

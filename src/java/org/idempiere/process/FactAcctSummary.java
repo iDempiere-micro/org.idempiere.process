@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.logging.Level;
 
 import org.compiere.impl.MReportCube;
-import org.compiere.impl.Query;
+import org.compiere.orm.Query;
 
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;

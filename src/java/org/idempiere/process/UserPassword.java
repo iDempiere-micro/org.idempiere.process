@@ -18,7 +18,7 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.impl.MSysConfig;
+import org.compiere.orm.MSysConfig;
 import org.compiere.impl.MUser;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;

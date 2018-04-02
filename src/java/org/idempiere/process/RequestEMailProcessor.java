@@ -35,8 +35,8 @@ import javax.mail.Session;
 import javax.mail.Store;
 
 import org.idempiere.common.exceptions.AdempiereException;
-import org.compiere.impl.MAttachment;
-import org.compiere.impl.MColumn;
+import org.compiere.orm.MAttachment;
+import org.compiere.orm.MColumn;
 import org.compiere.impl.MRequest;
 import org.compiere.impl.MRequestType;
 import org.compiere.impl.MUser;

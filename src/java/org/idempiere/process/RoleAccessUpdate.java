@@ -21,8 +21,8 @@ import java.util.List;
 import java.util.logging.Level;
 
 import org.compiere.Adempiere;
-import org.compiere.impl.MRole;
-import org.compiere.impl.Query;
+import org.compiere.orm.MRole;
+import org.compiere.orm.Query;
 import org.compiere.process.ProcessInfo;
 import org.idempiere.common.util.*;
 

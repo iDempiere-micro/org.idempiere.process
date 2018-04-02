@@ -25,7 +25,7 @@ import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.idempiere.common.exceptions.AdempiereException;
 import org.compiere.model.I_AD_Role_Included;
-import org.compiere.impl.MRole;
+import org.compiere.orm.MRole;
 import org.idempiere.common.util.DB;
 import org.idempiere.common.util.Env;
 

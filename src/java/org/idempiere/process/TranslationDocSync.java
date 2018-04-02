@@ -21,10 +21,10 @@ import java.util.List;
 import java.util.logging.Level;
 
 import org.compiere.impl.MClient;
-import org.compiere.impl.MColumn;
-import org.compiere.impl.MTable;
+import org.compiere.orm.MColumn;
+import org.compiere.orm.MTable;
 import org.idempiere.orm.PO;
-import org.compiere.impl.Query;
+import org.compiere.orm.Query;
 import org.compiere.util.DisplayType;
 import org.idempiere.common.util.Language;
 

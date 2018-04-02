@@ -31,6 +31,8 @@ import java.util.List;
 import java.util.logging.Level;
 
 import org.compiere.impl.*;
+import org.compiere.orm.MSequence;
+import org.compiere.orm.Query;
 import org.compiere.process.DocAction;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;

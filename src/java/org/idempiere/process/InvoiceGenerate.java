@@ -30,7 +30,7 @@ import org.idempiere.common.exceptions.AdempiereException;
 import org.compiere.impl.MBPartner;
 import org.compiere.impl.MClient;
 import org.compiere.impl.MCurrency;
-import org.compiere.impl.MDocType;
+import org.compiere.orm.MDocType;
 import org.compiere.impl.MInOut;
 import org.compiere.impl.MInOutLine;
 import org.compiere.impl.MInvoice;

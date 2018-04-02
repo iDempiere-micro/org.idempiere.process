@@ -25,7 +25,7 @@ import java.util.logging.Level;
 
 import org.compiere.impl.MAccount;
 import org.compiere.impl.MAcctSchema;
-import org.compiere.impl.MColumn;
+import org.compiere.orm.MColumn;
 import org.compiere.impl.MElementValue;
 import org.compiere.impl.X_I_ElementValue;
 

@@ -44,7 +44,7 @@ import org.compiere.impl.MPriceList;
 import org.compiere.impl.MPriceListVersion;
 import org.compiere.impl.MProduct;
 import org.compiere.impl.MProductPrice;
-import org.compiere.impl.Query;
+import org.compiere.orm.Query;
 import org.compiere.impl.X_M_Product_Acct;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;

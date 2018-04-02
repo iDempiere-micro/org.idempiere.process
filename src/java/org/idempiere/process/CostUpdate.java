@@ -30,7 +30,7 @@ import org.compiere.impl.MAcctSchema;
 import org.compiere.impl.MClient;
 import org.compiere.impl.MCost;
 import org.compiere.impl.MCostElement;
-import org.compiere.impl.MDocType;
+import org.compiere.orm.MDocType;
 import org.compiere.impl.MInventory;
 import org.compiere.impl.MInventoryLine;
 import org.compiere.impl.MProduct;

@@ -21,10 +21,10 @@ import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.logging.Level;
 
-import org.compiere.impl.MColumn;
+import org.compiere.orm.MColumn;
 import org.compiere.impl.MField;
 import org.compiere.impl.MTab;
-import org.compiere.impl.MTable;
+import org.compiere.orm.MTable;
 import org.idempiere.orm.PO;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;

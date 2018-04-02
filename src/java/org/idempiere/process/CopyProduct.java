@@ -7,7 +7,7 @@ import java.util.logging.Level;
 import org.compiere.impl.MBPartnerProduct;
 import org.compiere.impl.MProductDownload;
 import org.compiere.impl.MProductPrice;
-import org.compiere.impl.Query;
+import org.compiere.orm.Query;
 import org.compiere.impl.X_M_RelatedProduct;
 import org.compiere.impl.X_M_Replenish;
 import org.compiere.impl.X_M_Substitute;

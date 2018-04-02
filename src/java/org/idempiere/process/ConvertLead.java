@@ -30,7 +30,7 @@ import org.compiere.impl.MLocation;
 import org.compiere.impl.MOpportunity;
 import org.compiere.impl.MUser;
 import org.compiere.impl.PO;
-import org.compiere.impl.Query;
+import org.compiere.orm.Query;
 import org.compiere.impl.X_C_ContactActivity;
 
 import org.compiere.process.ProcessInfoParameter;

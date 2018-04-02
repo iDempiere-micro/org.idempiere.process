@@ -19,7 +19,7 @@ package org.idempiere.process;
 import java.math.BigDecimal;
 import java.util.logging.Level;
 
-import org.compiere.impl.MTable;
+import org.compiere.orm.MTable;
 import org.compiere.util.Msg;
 
 import org.compiere.process.ProcessInfoParameter;

@@ -18,7 +18,7 @@ import java.sql.ResultSet;
 import java.util.logging.Level;
 
 import org.compiere.Adempiere;
-import org.compiere.impl.M_Element;
+import org.compiere.orm.M_Element;
 import org.compiere.process.ProcessInfo;
 import org.idempiere.common.util.*;
 

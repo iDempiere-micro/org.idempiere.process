@@ -26,9 +26,9 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.impl.MTable;
-import org.compiere.impl.MViewColumn;
-import org.compiere.impl.MViewComponent;
+import org.compiere.orm.MTable;
+import org.compiere.orm.MViewColumn;
+import org.compiere.orm.MViewComponent;
 import org.compiere.impl.PO;
 import org.idempiere.common.util.Env;
 import org.compiere.util.Msg;

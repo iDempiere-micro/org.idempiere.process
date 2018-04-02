@@ -25,7 +25,7 @@ import java.util.logging.Level;
 
 import org.idempiere.common.exceptions.DBException;
 import org.compiere.impl.MAging;
-import org.compiere.impl.MRole;
+import org.compiere.orm.MRole;
 import org.compiere.webutil.TimeUtil;
 
 import org.compiere.process.ProcessInfoParameter;
