@@ -23,12 +23,12 @@ import java.util.List;
 import java.util.logging.Level;
 
 import org.adempiere.exceptions.FillMandatoryException;
+import org.compiere.crm.MBPartnerLocation;
+import org.compiere.crm.MLocation;
+import org.compiere.crm.MUser;
 import org.compiere.model.I_C_ContactActivity;
 import org.compiere.impl.MBPartner;
-import org.compiere.impl.MBPartnerLocation;
-import org.compiere.impl.MLocation;
 import org.compiere.impl.MOpportunity;
-import org.compiere.impl.MUser;
 import org.compiere.impl.PO;
 import org.compiere.orm.Query;
 import org.compiere.impl.X_C_ContactActivity;

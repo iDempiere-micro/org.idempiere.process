@@ -18,9 +18,10 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
+import org.compiere.crm.MBPartnerLocation;
 import org.compiere.impl.MBPartner;
-import org.compiere.impl.MBPartnerLocation;
 import org.compiere.impl.MLocator;
+import org.compiere.model.I_C_BPartner_Location;
 import org.compiere.orm.MOrg;
 import org.compiere.orm.MOrgInfo;
 import org.compiere.orm.MRole;
@@ -89,7 +90,7 @@ public class BPartnerOrgLink extends SvrProcess
 		if (bp.get_ID() == 0)
 			throw new AdempiereUserError ("Business Partner not found - C_BPartner_ID=" + p_C_BPartner_ID);
 		//	BP Location
-		MBPartnerLocation[] locs = bp.getLocations(false);
+		I_C_BPartner_Location[] locs = bp.getLocations(false);
 		if (locs == null || locs.length == 0)
 			throw new IllegalArgumentException ("Business Partner has no Location");
 		//	Location

@@ -23,13 +23,15 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.logging.Level;
 
+import org.compiere.crm.MBPartnerLocation;
+import org.compiere.crm.MLocation;
+import org.compiere.crm.MUser;
 import org.compiere.impl.MBPartner;
-import org.compiere.impl.MBPartnerLocation;
 import org.compiere.impl.MInvoice;
 import org.compiere.impl.MInvoiceLine;
-import org.compiere.impl.MLocation;
-import org.compiere.impl.MUser;
 import org.compiere.impl.X_I_Invoice;
+import org.compiere.model.I_C_BPartner_Location;
+import org.compiere.model.I_C_Location;
 import org.idempiere.common.util.Env;
 
 import org.compiere.process.ProcessInfoParameter;
@@ -541,8 +543,8 @@ public class ImportInvoice extends SvrProcess
 				imp.setC_BPartner_ID (bp.getC_BPartner_ID ());
 				
 				//	BP Location
-				MBPartnerLocation bpl = null; 
-				MBPartnerLocation[] bpls = bp.getLocations(true);
+				I_C_BPartner_Location bpl = null;
+				I_C_BPartner_Location[] bpls = bp.getLocations(true);
 				for (int i = 0; bpl == null && i < bpls.length; i++)
 				{
 					if (imp.getC_BPartner_Location_ID() == bpls[i].getC_BPartner_Location_ID())
@@ -553,7 +555,7 @@ public class ImportInvoice extends SvrProcess
 					//	Same Location Info
 					else if (imp.getC_Location_ID() == 0)
 					{
-						MLocation loc = bpls[i].getLocation(false);
+						I_C_Location loc = bpls[i].getLocation();
 						if (loc.equals(imp.getC_Country_ID(), imp.getC_Region_ID(), 
 								imp.getPostal(), "", imp.getCity(), 
 								imp.getAddress1(), imp.getAddress2()))
@@ -601,15 +603,15 @@ public class ImportInvoice extends SvrProcess
 					}
 					if (user == null)
 					{
-						user = new MUser (bp);
+						org.compiere.impl.MUser user2 = new org.compiere.impl.MUser (bp);
 						if (imp.getContactName () == null)
-							user.setName (imp.getName ());
+							user2.setName (imp.getName ());
 						else
-							user.setName (imp.getContactName ());
-						user.setEMail (imp.getEMail ());
-						user.setPhone (imp.getPhone ());
-						if (user.save ())
-							imp.setAD_User_ID (user.getAD_User_ID ());
+							user2.setName (imp.getContactName ());
+						user2.setEMail (imp.getEMail ());
+						user2.setPhone (imp.getPhone ());
+						if (user2.save ())
+							imp.setAD_User_ID (user2.getAD_User_ID ());
 					}
 				}
 				imp.saveEx();

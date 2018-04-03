@@ -37,7 +37,7 @@ import org.compiere.impl.MInvoice;
 import org.compiere.impl.MInvoiceLine;
 import org.compiere.impl.MInvoicePaySchedule;
 import org.compiere.impl.MInvoiceSchedule;
-import org.compiere.impl.MLocation;
+import org.compiere.crm.MLocation;
 import org.compiere.impl.MOrder;
 import org.compiere.impl.MOrderLine;
 import org.compiere.impl.MOrderPaySchedule;
