@@ -16,10 +16,9 @@
  *****************************************************************************/
 package org.idempiere.process;
 
-import org.compiere.process.ClientProcess;
+import org.compiere.process2.ClientProcess;
 import org.compiere.process.SvrProcess;
 import org.idempiere.common.util.CacheMgt;
-import org.idempiere.common.util.Env;
 
 /**
  *	Reset Cache

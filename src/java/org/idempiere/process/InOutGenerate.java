@@ -25,7 +25,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.logging.Level;
 
-import org.compiere.process.DocAction;
+import org.compiere.process2.DocAction;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.idempiere.common.exceptions.AdempiereException;

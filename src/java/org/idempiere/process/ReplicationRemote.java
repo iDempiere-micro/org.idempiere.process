@@ -25,6 +25,9 @@ import javax.sql.RowSet;
 
 import org.compiere.impl.MSystem;
 import org.compiere.process.*;
+import org.compiere.process2.RemoteMergeDataVO;
+import org.compiere.process2.RemoteSetupVO;
+import org.compiere.process2.RemoteUpdateVO;
 import org.idempiere.common.util.DB;
 
 /**

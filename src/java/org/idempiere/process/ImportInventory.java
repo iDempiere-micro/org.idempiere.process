@@ -22,8 +22,8 @@ import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.logging.Level;
 
-import org.compiere.process.DocAction;
-import org.compiere.process.DocumentEngine;
+import org.compiere.process2.DocAction;
+import org.compiere.process2.DocumentEngine;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.idempiere.common.exceptions.AdempiereException;

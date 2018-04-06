@@ -25,7 +25,7 @@ import java.sql.Timestamp;
 import java.text.DecimalFormat;
 import java.util.logging.Level;
 
-import org.compiere.process.DocAction;
+import org.compiere.process2.DocAction;
 import org.idempiere.common.exceptions.AdempiereException;
 import org.compiere.impl.MBPartner;
 import org.compiere.impl.MClient;

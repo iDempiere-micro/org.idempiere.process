@@ -26,7 +26,7 @@ import org.compiere.impl.MAllocationHdr;
 import org.compiere.impl.MAllocationLine;
 import org.compiere.impl.MInvoice;
 import org.compiere.impl.MPayment;
-import org.compiere.process.DocAction;
+import org.compiere.process2.DocAction;
 import org.idempiere.common.util.Env;
 
 import org.compiere.process.ProcessInfoParameter;

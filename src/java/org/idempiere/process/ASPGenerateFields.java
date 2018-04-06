@@ -31,6 +31,7 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
+import org.compiere.model.I_AD_Process_Para;
 import org.compiere.orm.MColumn;
 import org.compiere.impl.MField;
 import org.compiere.impl.MProcess;
@@ -152,7 +153,7 @@ public class ASPGenerateFields extends SvrProcess
 			aspProcess = new X_ASP_Process(getCtx(), asp_process_id, get_TrxName());
 		}
 		// parameters
-		for (MProcessPara processpara : process.getParameters()) {
+		for (I_AD_Process_Para processpara : process.getParameters()) {
 			if (DB.getSQLValueEx(
 					get_TrxName(),
 					"SELECT COUNT(*) FROM ASP_Process_Para WHERE ASP_Process_ID = ? AND AD_Process_Para_ID = ?",

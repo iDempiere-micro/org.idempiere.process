@@ -31,7 +31,7 @@ import org.compiere.orm.Query;
 import org.compiere.impl.X_M_Production;
 import org.compiere.impl.X_M_ProductionLine;
 import org.compiere.impl.X_M_ProductionPlan;
-import org.compiere.process.DocumentEngine;
+import org.compiere.process2.DocumentEngine;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.eevolution.impl.MPPProductBOM;
