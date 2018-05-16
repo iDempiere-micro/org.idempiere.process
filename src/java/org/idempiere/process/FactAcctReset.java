@@ -27,7 +27,7 @@ import org.compiere.impl.MAllocationHdr;
 import org.compiere.impl.MBankStatement;
 import org.compiere.impl.MCash;
 import org.compiere.impl.MClient;
-import org.compiere.impl.MInOut;
+import org.compiere.order.MInOut;
 import org.compiere.impl.MInventory;
 import org.compiere.impl.MInvoice;
 import org.compiere.impl.MJournal;

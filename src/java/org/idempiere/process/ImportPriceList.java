@@ -29,10 +29,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.logging.Level;
 
-import org.compiere.impl.MPriceList;
-import org.compiere.impl.MPriceListVersion;
-import org.compiere.impl.MProductPrice;
-import org.compiere.impl.X_I_PriceList;
+import org.compiere.product.MPriceList;
+import org.compiere.product.MPriceListVersion;
+import org.compiere.product.MProductPrice;
+import org.compiere.product.X_I_PriceList;
 import org.compiere.impl.X_M_ProductPriceVendorBreak;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;

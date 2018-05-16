@@ -23,7 +23,7 @@ import org.compiere.impl.MBPartner;
 import org.compiere.impl.MPaySelection;
 import org.compiere.impl.MPaySelectionCheck;
 import org.compiere.impl.MPaySelectionLine;
-import org.compiere.impl.X_C_Order;
+import org.compiere.order.X_C_Order;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.idempiere.common.util.AdempiereUserError;

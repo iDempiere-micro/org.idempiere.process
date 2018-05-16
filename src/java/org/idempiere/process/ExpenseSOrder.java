@@ -29,7 +29,7 @@ import org.compiere.impl.MOrderLine;
 import org.compiere.impl.MProject;
 import org.compiere.impl.MTimeExpense;
 import org.compiere.impl.MTimeExpenseLine;
-import org.compiere.process2.DocAction;
+import org.compiere.process.DocAction;
 import org.idempiere.common.util.Env;
 
 import org.compiere.process.ProcessInfoParameter;

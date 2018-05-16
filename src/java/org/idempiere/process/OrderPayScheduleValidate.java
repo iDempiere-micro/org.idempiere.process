@@ -20,7 +20,7 @@ import java.math.BigDecimal;
 import java.util.logging.Level;
 
 import org.compiere.impl.MOrder;
-import org.compiere.impl.MOrderPaySchedule;
+import org.compiere.order.MOrderPaySchedule;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.idempiere.common.util.Env;

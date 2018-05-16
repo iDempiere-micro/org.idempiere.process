@@ -18,7 +18,7 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
-import org.compiere.impl.MPaymentTerm;
+import org.compiere.order.MPaymentTerm;
 import org.compiere.util.Msg;
 
 import org.compiere.process.ProcessInfoParameter;

@@ -38,7 +38,6 @@ import org.idempiere.common.util.Env;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.idempiere.common.util.DB;
-import software.hsharp.business.models.ILocation;
 
 /**
  *	Import Order from I_Order

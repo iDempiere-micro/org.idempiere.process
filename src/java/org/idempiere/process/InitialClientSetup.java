@@ -33,11 +33,11 @@ import java.io.File;
 import java.util.logging.Level;
 
 import org.compiere.impl.MCity;
-import org.compiere.impl.MCurrency;
 import org.compiere.impl.MSetup;
 import org.compiere.orm.MSysConfig;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
+import org.compiere.product.MCurrency;
 import org.compiere.webutil.EMail;
 import org.idempiere.common.exceptions.AdempiereException;
 import org.idempiere.common.util.*;

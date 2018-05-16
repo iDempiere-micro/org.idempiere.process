@@ -19,15 +19,9 @@ package org.idempiere.process;
 import java.math.BigDecimal;
 import java.util.logging.Level;
 
-import org.compiere.impl.MCurrency;
-import org.compiere.impl.MInOut;
-import org.compiere.impl.MInOutLine;
-import org.compiere.impl.MInvoice;
-import org.compiere.impl.MInvoiceLine;
-import org.compiere.impl.MInvoicePaySchedule;
-import org.compiere.impl.MOrder;
-import org.compiere.impl.MOrderPaySchedule;
-import org.compiere.impl.PO;
+import org.compiere.impl.*;
+import org.compiere.order.MOrderPaySchedule;
+import org.compiere.product.MCurrency;
 import org.idempiere.common.util.Env;
 
 import org.compiere.process.ProcessInfoParameter;

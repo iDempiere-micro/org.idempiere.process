@@ -20,7 +20,7 @@ import java.util.logging.Level;
 
 import org.compiere.impl.MInOut;
 import org.compiere.impl.MPackage;
-import org.compiere.impl.MShipper;
+import org.compiere.order.MShipper;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 
@@ -81,7 +81,7 @@ public class PackageCreate extends SvrProcess
 		if (p_M_Shipper_ID == 0)
 			throw new IllegalArgumentException("No Shipper");
 		
-		MInOut shipment = new MInOut (getCtx(), p_M_InOut_ID, null);
+		MInOut shipment = new MInOut(getCtx(), p_M_InOut_ID, null);
 		if (shipment.get_ID() != p_M_InOut_ID)
 			throw new IllegalArgumentException("Cannot find Shipment ID=" + p_M_InOut_ID);
 		MShipper shipper = new MShipper (getCtx(), p_M_Shipper_ID, get_TrxName());

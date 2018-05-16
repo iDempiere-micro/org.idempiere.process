@@ -7,7 +7,7 @@ import java.util.logging.Level;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.idempiere.common.exceptions.AdempiereException;
-import org.compiere.impl.MProductBOM;
+import org.compiere.product.MProductBOM;
 import org.compiere.orm.Query;
 
 public class UniversalSubstitution extends SvrProcess {

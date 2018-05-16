@@ -24,7 +24,7 @@ import java.util.logging.Level;
 
 import org.compiere.impl.MMovement;
 import org.compiere.impl.MMovementLine;
-import org.compiere.impl.MRefList;
+import org.compiere.orm.MRefList;
 import org.compiere.impl.MStorageOnHand;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;

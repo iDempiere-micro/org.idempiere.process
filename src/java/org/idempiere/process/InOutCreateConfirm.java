@@ -20,7 +20,6 @@ import java.util.logging.Level;
 
 import org.compiere.impl.MInOut;
 import org.compiere.impl.MInOutConfirm;
-
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 

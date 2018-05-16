@@ -19,13 +19,13 @@ package org.idempiere.process;
 import java.math.BigDecimal;
 import java.util.logging.Level;
 
+import org.compiere.impl.MInOut;
+import org.compiere.impl.MInOutLine;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.idempiere.common.exceptions.AdempiereException;
 import org.adempiere.exceptions.FillMandatoryException;
 import org.adempiere.exceptions.InvoiceFullyMatchedException;
-import org.compiere.impl.MInOut;
-import org.compiere.impl.MInOutLine;
 import org.compiere.impl.MInvoice;
 import org.compiere.impl.MInvoiceLine;
 import org.idempiere.common.util.Env;

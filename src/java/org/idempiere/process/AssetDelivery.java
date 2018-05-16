@@ -26,9 +26,9 @@ import org.compiere.impl.MAsset;
 import org.compiere.impl.MAssetDelivery;
 import org.compiere.impl.MClient;
 import org.compiere.impl.MMailText;
-import org.compiere.impl.MProductDownload;
 import org.compiere.impl.MUser;
 import org.compiere.impl.MUserMail;
+import org.compiere.product.MProductDownload;
 import org.compiere.webutil.EMail;
 
 import org.compiere.process.ProcessInfoParameter;

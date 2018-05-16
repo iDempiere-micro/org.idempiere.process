@@ -23,11 +23,11 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.logging.Level;
 
+import org.compiere.order.X_C_Order;
 import org.idempiere.common.exceptions.AdempiereException;
 import org.idempiere.common.exceptions.DBException;
 import org.compiere.impl.MPaySelection;
 import org.compiere.impl.MPaySelectionLine;
-import org.compiere.impl.X_C_Order;
 import org.idempiere.common.util.Env;
 
 import org.compiere.process.ProcessInfoParameter;

@@ -20,8 +20,8 @@ import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.logging.Level;
 
-import org.compiere.impl.MInOut;
-import org.compiere.impl.MInOutLine;
+import org.compiere.order.MInOut;
+import org.compiere.order.MInOutLine;
 import org.compiere.impl.MProject;
 import org.compiere.impl.MProjectIssue;
 import org.compiere.impl.MProjectLine;

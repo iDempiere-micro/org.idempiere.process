@@ -21,7 +21,7 @@ import java.util.*;
 import java.util.logging.*;
 
 import org.compiere.impl.MProduct;
-import org.compiere.impl.MProductBOM;
+import org.compiere.product.MProductBOM;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 

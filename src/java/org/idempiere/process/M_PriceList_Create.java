@@ -32,7 +32,7 @@ import org.compiere.impl.MAcctSchema;
 import org.compiere.impl.MClientInfo;
 import org.compiere.impl.MDiscountSchemaLine;
 import org.compiere.impl.MProduct;
-import org.compiere.impl.MProductPrice;
+import org.compiere.product.MProductPrice;
 import org.compiere.orm.MSequence;
 import org.compiere.impl.MUOMConversion;
 import org.compiere.impl.ProductCost;

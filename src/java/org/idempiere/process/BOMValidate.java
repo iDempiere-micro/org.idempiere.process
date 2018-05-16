@@ -24,7 +24,7 @@ import java.util.logging.Level;
 import org.compiere.impl.MBOM;
 import org.compiere.impl.MBOMProduct;
 import org.compiere.impl.MProduct;
-import org.compiere.impl.MProductBOM;
+import org.compiere.product.MProductBOM;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.idempiere.common.util.DB;

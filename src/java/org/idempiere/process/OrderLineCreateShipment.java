@@ -19,8 +19,8 @@ package org.idempiere.process;
 import java.sql.Timestamp;
 import java.util.logging.Level;
 
-import org.compiere.impl.MInOut;
-import org.compiere.impl.MInOutLine;
+import org.compiere.order.MInOut;
+import org.compiere.order.MInOutLine;
 import org.compiere.impl.MOrder;
 import org.compiere.impl.MOrderLine;
 import org.idempiere.common.util.Env;

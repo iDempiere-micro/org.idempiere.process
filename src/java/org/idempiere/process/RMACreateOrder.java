@@ -17,12 +17,9 @@
 
 package org.idempiere.process;
 
-import org.compiere.impl.MInOut;
-import org.compiere.impl.MInvoice;
-import org.compiere.impl.MOrder;
-import org.compiere.impl.MOrderLine;
-import org.compiere.impl.MRMA;
-import org.compiere.impl.MRMALine;
+import org.compiere.impl.*;
+import org.compiere.model.I_C_Invoice;
+import org.compiere.order.MInOut;
 import org.compiere.process.SvrProcess;
 
 /**
@@ -48,7 +45,7 @@ public class RMACreateOrder extends SvrProcess
         MRMA rma = new MRMA(getCtx(), rmaId, get_TrxName());
         
         // Load Original Order
-        MOrder originalOrder = rma.getOriginalOrder();
+        org.compiere.order.MOrder originalOrder = rma.getOriginalOrder();
         
         if (rma.get_ID() == 0)
         {
@@ -83,9 +80,9 @@ public class RMACreateOrder extends SvrProcess
         }
         
     	MInOut originalShipment = rma.getShipment();
-    	MInvoice originalInvoice = rma.getOriginalInvoice();
+    	I_C_Invoice originalInvoice = rma.getOriginalInvoice();
 
-        MRMALine lines[] = rma.getLines(true);                
+        MRMALine lines[] = rma.getLines(true);
         for (MRMALine line : lines)
         {
             if (line.getShipLine() != null && line.getShipLine().getC_OrderLine_ID() != 0 && line.getM_Product_ID() != 0)

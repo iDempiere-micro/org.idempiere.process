@@ -25,23 +25,13 @@ import java.sql.Timestamp;
 import java.text.DecimalFormat;
 import java.util.logging.Level;
 
-import org.compiere.process2.DocAction;
+import org.compiere.impl.*;
+import org.compiere.process.DocAction;
+import org.compiere.product.MCurrency;
 import org.idempiere.common.exceptions.AdempiereException;
-import org.compiere.impl.MBPartner;
-import org.compiere.impl.MClient;
-import org.compiere.impl.MCurrency;
 import org.compiere.orm.MDocType;
-import org.compiere.impl.MInOut;
-import org.compiere.impl.MInOutLine;
-import org.compiere.impl.MInvoice;
-import org.compiere.impl.MInvoiceLine;
-import org.compiere.impl.MInvoicePaySchedule;
-import org.compiere.impl.MInvoiceSchedule;
 import org.compiere.crm.MLocation;
-import org.compiere.impl.MOrder;
-import org.compiere.impl.MOrderLine;
-import org.compiere.impl.MOrderPaySchedule;
-import org.compiere.impl.PO;
+import org.compiere.order.MOrderPaySchedule;
 import org.compiere.util.DisplayType;
 import org.idempiere.common.util.*;
 import org.compiere.util.Msg;
@@ -75,7 +65,7 @@ public class InvoiceGenerate extends SvrProcess
 	/**	The current Invoice	*/
 	private MInvoice 	m_invoice = null;
 	/**	The current Shipment	*/
-	private MInOut	 	m_ship = null;
+	private MInOut m_ship = null;
 	/** Numner of Invoices		*/
 	private int			m_created = 0;
 	/**	Line Number				*/

@@ -33,13 +33,14 @@ import java.util.logging.Level;
 import org.compiere.impl.*;
 import org.compiere.orm.MSequence;
 import org.compiere.orm.Query;
-import org.compiere.process2.DocAction;
+import org.compiere.process.DocAction;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.compiere.util.Msg;
 import org.idempiere.common.util.Util;
 import org.idempiere.common.util.ValueNamePair;
 import org.compiere.impl.PO;
+import org.idempiere.icommon.model.IPO;
 
 /**
  *	IDEMPIERE-2100 Automate Recurring Run
@@ -118,20 +119,20 @@ public class RecurringRun extends SvrProcess
 
 			Timestamp currdate = rec.getDateNextRun();
 			String msg = rec.executeRun();
-			PO po = rec.getLastPO();
+			IPO po = rec.getLastPO();
 			if (po != null) {
 
 				replaceTagsInDescription(po);
 
 				/* replace tags on lines of documents */
-				PO[] polines = null;
+				IPO[] polines = null;
 				if (po instanceof MInvoice) {
 					polines = ((MInvoice)po).getLines();
 				} else if (po instanceof MOrder) {
 					polines = ((MOrder)po).getLines();
 				}
 				if (polines != null) {
-					for (PO poline : polines) {
+					for (IPO poline : polines) {
 						replaceTagsInDescription(poline);
 					}
 				}
@@ -140,7 +141,7 @@ public class RecurringRun extends SvrProcess
 					for (MJournal journal : ((MJournalBatch)po).getJournals(false)) {
 						polines = journal.getLines(false);
 						if (polines != null) {
-							for (PO poline : polines) {
+							for (IPO poline : polines) {
 								replaceTagsInDescription(poline);
 							}
 						}
@@ -154,7 +155,9 @@ public class RecurringRun extends SvrProcess
 						log.warning("completePO - failed: " + po);
 						throw new IllegalStateException("PO Process Failed: " + po + " - " + ((DocAction) po).getProcessMsg());
 					}
-					po.saveEx();
+					if( po instanceof org.compiere.orm.PO ) {
+						((org.compiere.orm.PO)po).saveEx();
+					}
 				}
 
 				msg = Msg.parseTranslation(getCtx(), msg);
@@ -165,26 +168,29 @@ public class RecurringRun extends SvrProcess
 		return "@OK@";
 	}	//	doIt
 
-	private void replaceTagsInDescription(PO po) {
-		/* Parse context and prm tags on description */
-		if (po.get_ColumnIndex("Description") >= 0) {
-			String description = po.get_ValueAsString("Description");
-			String description_org = description;
-			description = MSequence.parseVariable(description, po, get_TrxName(), true);
+	private void replaceTagsInDescription(IPO _po) {
+	    if (_po instanceof org.compiere.orm.PO) {
+            org.compiere.orm.PO po = (org.compiere.orm.PO) _po;
+            /* Parse context and prm tags on description */
+            if (po.get_ColumnIndex("Description") >= 0) {
+                String description = po.get_ValueAsString("Description");
+                String description_org = description;
+                description = MSequence.parseVariable(description, po, get_TrxName(), true);
 
-			if (prms.size() > 0) {
-				for (ValueNamePair prm : prms) {
-					String prmName = prm.getValue();
-					String prmValue = prm.getName();
-					String tag = "@" + prmName + "@";
-					description = description.replaceAll(tag, prmValue);
-				}
-			}
-			if (description_org != null && ! description_org.equals(description)) {
-				po.set_ValueOfColumn("Description", description);
-				po.saveEx();
-			}
-		}
+                if (prms.size() > 0) {
+                    for (ValueNamePair prm : prms) {
+                        String prmName = prm.getValue();
+                        String prmValue = prm.getName();
+                        String tag = "@" + prmName + "@";
+                        description = description.replaceAll(tag, prmValue);
+                    }
+                }
+                if (description_org != null && !description_org.equals(description)) {
+                    po.set_ValueOfColumn("Description", description);
+                    po.saveEx();
+                }
+            }
+        }
 	}
 
 }	//	RecurringRun

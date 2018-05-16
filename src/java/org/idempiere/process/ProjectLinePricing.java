@@ -20,9 +20,10 @@ package org.idempiere.process;
 import java.util.logging.Level;
 
 import org.adempiere.base.Core;
-import org.adempiere.base.IProductPricing;
+import org.compiere.product.IProductPricing;
 import org.compiere.impl.MProject;
 import org.compiere.impl.MProjectLine;
+import org.compiere.product.MProduct;
 import org.compiere.util.Msg;
 
 import org.compiere.process.ProcessInfoParameter;
@@ -75,7 +76,7 @@ public class ProjectLinePricing extends SvrProcess
 			throw new IllegalArgumentException("No PriceList");
 		//
 		boolean isSOTrx = true;
-		IProductPricing pp = Core.getProductPricing();
+		IProductPricing pp = MProduct.getProductPricing();
 		pp.setInitialValues(projectLine.getM_Product_ID(), project.getC_BPartner_ID(), 
 				projectLine.getPlannedQty(), isSOTrx, get_TrxName());
 		pp.setM_PriceList_ID(project.getM_PriceList_ID());

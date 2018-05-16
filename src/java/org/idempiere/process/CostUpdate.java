@@ -34,7 +34,7 @@ import org.compiere.orm.MDocType;
 import org.compiere.impl.MInventory;
 import org.compiere.impl.MInventoryLine;
 import org.compiere.impl.MProduct;
-import org.compiere.process2.DocAction;
+import org.compiere.process.DocAction;
 import org.compiere.process2.DocumentEngine;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;

@@ -39,7 +39,7 @@ import org.compiere.impl.MBankAccount;
 import org.compiere.impl.MCash;
 import org.compiere.impl.MCashBook;
 import org.compiere.impl.MCashLine;
-import org.compiere.process2.DocAction;
+import org.compiere.process.DocAction;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.idempiere.common.util.AdempiereUserError;

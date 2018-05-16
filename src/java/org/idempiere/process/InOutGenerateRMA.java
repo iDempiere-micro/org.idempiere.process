@@ -23,14 +23,10 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.logging.Level;
 
+import org.compiere.impl.*;
 import org.compiere.model.I_C_InvoiceLine;
-import org.compiere.impl.MInOut;
-import org.compiere.impl.MInOutLine;
-import org.compiere.impl.MInvoiceLine;
-import org.compiere.impl.MRMA;
-import org.compiere.impl.MRMALine;
 import org.compiere.orm.Query;
-import org.compiere.process2.DocAction;
+import org.compiere.process.DocAction;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.compiere.util.Msg;

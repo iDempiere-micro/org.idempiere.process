@@ -25,19 +25,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.logging.Level;
 
-import org.compiere.process2.DocAction;
+import org.compiere.impl.*;
+import org.compiere.process.DocAction;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.idempiere.common.exceptions.AdempiereException;
-import org.compiere.impl.MClient;
-import org.compiere.impl.MInOut;
-import org.compiere.impl.MInOutLine;
-import org.compiere.impl.MLocator;
-import org.compiere.impl.MLocatorType;
-import org.compiere.impl.MOrder;
-import org.compiere.impl.MOrderLine;
-import org.compiere.impl.MProduct;
-import org.compiere.impl.MStorageOnHand;
 import org.idempiere.common.util.AdempiereUserError;
 import org.idempiere.common.util.DB;
 import org.idempiere.common.util.Env;
@@ -70,7 +62,7 @@ public class InOutGenerate extends SvrProcess
 	private Timestamp       p_DateShipped = null;
 	
 	/**	The current Shipment	*/
-	private MInOut 		m_shipment = null;
+	private MInOut m_shipment = null;
 	/** Number of Shipments	being created	*/
 	private int			m_created = 0;
 	/**	Line Number				*/

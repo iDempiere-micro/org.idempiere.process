@@ -20,8 +20,8 @@ import java.math.BigDecimal;
 import java.util.logging.Level;
 
 import org.compiere.impl.MProduct;
-import org.compiere.impl.MUOM;
 import org.compiere.impl.MUOMConversion;
+import org.compiere.product.MUOM;
 import org.idempiere.common.util.Env;
 
 import org.compiere.process.ProcessInfoParameter;
