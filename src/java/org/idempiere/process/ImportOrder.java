@@ -29,7 +29,7 @@ import org.compiere.crm.MUser;
 import org.compiere.impl.MBPartner;
 import org.compiere.impl.MOrder;
 import org.compiere.impl.MOrderLine;
-import org.compiere.impl.X_I_Order;
+import org.compiere.order.X_I_Order;
 import org.compiere.model.I_C_BPartner_Location;
 import org.compiere.model.I_C_Location;
 import org.idempiere.common.util.Env;

@@ -30,7 +30,7 @@ import java.util.logging.Level;
 
 import org.compiere.impl.MAcctSchema;
 import org.compiere.impl.MClientInfo;
-import org.compiere.impl.MDiscountSchemaLine;
+import org.compiere.product.MDiscountSchemaLine;
 import org.compiere.impl.MProduct;
 import org.compiere.product.MProductPrice;
 import org.compiere.orm.MSequence;
