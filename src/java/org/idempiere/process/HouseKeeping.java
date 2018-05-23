@@ -38,6 +38,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Level;
 
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.orm.GenericPO;
 import org.compiere.orm.MTable;
 import org.compiere.impl.X_AD_HouseKeeping;
@@ -57,7 +58,7 @@ public class HouseKeeping extends SvrProcess{
 	private int		p_AD_HouseKeeping_ID = 0;
 	
 	protected void prepare() {
-		ProcessInfoParameter[] parameter = getParameter();
+		IProcessInfoParameter[] parameter = getParameter();
 		for (int i = 0; i < parameter.length; i++)
 		{
 			String name = parameter[i].getParameterName();

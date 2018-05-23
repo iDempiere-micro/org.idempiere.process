@@ -27,6 +27,7 @@ import org.compiere.impl.MAllocationHdr;
 import org.compiere.impl.MBankStatement;
 import org.compiere.impl.MCash;
 import org.compiere.impl.MClient;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.order.MInOut;
 import org.compiere.impl.MInventory;
 import org.compiere.impl.MInvoice;
@@ -75,7 +76,7 @@ public class FactAcctReset extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

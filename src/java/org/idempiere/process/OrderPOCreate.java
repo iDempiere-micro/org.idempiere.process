@@ -25,6 +25,7 @@ import java.util.logging.Level;
 import org.compiere.impl.MBPartner;
 import org.compiere.impl.MOrder;
 import org.compiere.impl.MOrderLine;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.orm.MOrgInfo;
 import org.compiere.util.Msg;
 
@@ -63,7 +64,7 @@ public class OrderPOCreate extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

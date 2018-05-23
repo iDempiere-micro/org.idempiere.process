@@ -27,6 +27,7 @@ import org.compiere.impl.MInvoiceLine;
 import org.compiere.impl.MRequest;
 import org.compiere.impl.MRequestType;
 import org.compiere.impl.MRequestUpdate;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.compiere.util.Msg;
@@ -63,7 +64,7 @@ public class RequestInvoice extends SvrProcess
 	 */
 	protected void prepare ()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

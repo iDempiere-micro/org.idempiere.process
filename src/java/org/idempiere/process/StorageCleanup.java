@@ -24,6 +24,7 @@ import java.util.logging.Level;
 
 import org.compiere.impl.MMovement;
 import org.compiere.impl.MMovementLine;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.orm.MRefList;
 import org.compiere.impl.MStorageOnHand;
 import org.compiere.process.ProcessInfoParameter;
@@ -47,7 +48,7 @@ public class StorageCleanup extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

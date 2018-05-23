@@ -33,6 +33,7 @@ import java.util.Enumeration;
 import java.util.logging.Level;
 
 import org.compiere.impl.MClientInfo;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.model.I_AD_Process_Para;
 import org.compiere.orm.MColumn;
 import org.compiere.impl.MField;
@@ -86,7 +87,7 @@ public class ASPGenerateLevel extends SvrProcess
 	 */
 	protected void prepare ()
 	{
-		for (ProcessInfoParameter para : getParameter())
+		for (IProcessInfoParameter para : getParameter())
 		{
 			String name = para.getParameterName();
 			if (para.getParameter() == null)

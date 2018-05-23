@@ -27,6 +27,7 @@ import org.compiere.impl.MInvoice;
 import org.compiere.impl.MInvoiceLine;
 import org.compiere.impl.MRMA;
 import org.compiere.impl.MRMALine;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.process.DocAction;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
@@ -59,7 +60,7 @@ public class InvoiceGenerateRMA extends SvrProcess
     protected void prepare()
     {
         
-        ProcessInfoParameter[] para = getParameter();
+        IProcessInfoParameter[] para = getParameter();
         for (int i = 0; i < para.length; i++)
         {
             String name = para[i].getParameterName();

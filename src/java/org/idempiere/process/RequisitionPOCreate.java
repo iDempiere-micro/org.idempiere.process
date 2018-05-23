@@ -25,6 +25,7 @@ import java.util.logging.Level;
 import org.adempiere.exceptions.NoVendorForProductException;
 import org.apache.commons.collections.keyvalue.MultiKey;
 import org.compiere.impl.MBPartner;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.order.MCharge;
 import org.compiere.impl.MOrder;
 import org.compiere.impl.MOrderLine;
@@ -96,7 +97,7 @@ public class RequisitionPOCreate extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

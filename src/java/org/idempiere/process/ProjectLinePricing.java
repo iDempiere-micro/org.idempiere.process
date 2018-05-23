@@ -20,6 +20,7 @@ package org.idempiere.process;
 import java.util.logging.Level;
 
 import org.adempiere.base.Core;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.product.IProductPricing;
 import org.compiere.impl.MProject;
 import org.compiere.impl.MProjectLine;
@@ -45,7 +46,7 @@ public class ProjectLinePricing extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

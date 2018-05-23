@@ -25,6 +25,7 @@ import org.compiere.impl.MBankStatementLine;
 import org.compiere.impl.MInvoice;
 import org.compiere.impl.MPayment;
 import org.compiere.impl.X_I_BankStatement;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.idempiere.common.util.AdempiereSystemError;
@@ -45,7 +46,7 @@ public class BankStatementPayment extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

@@ -29,6 +29,7 @@ import org.compiere.impl.MJournal;
 import org.compiere.impl.MJournalBatch;
 import org.compiere.impl.MJournalLine;
 import org.compiere.impl.X_I_GLJournal;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.webutil.TimeUtil;
 
 import org.compiere.process.ProcessInfoParameter;
@@ -64,7 +65,7 @@ public class ImportGLJournal extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

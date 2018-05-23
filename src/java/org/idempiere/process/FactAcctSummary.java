@@ -21,6 +21,7 @@ import java.util.List;
 import java.util.logging.Level;
 
 import org.compiere.impl.MReportCube;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.orm.Query;
 
 import org.compiere.process.ProcessInfoParameter;
@@ -42,8 +43,8 @@ public class FactAcctSummary extends SvrProcess {
 	@Override
 	protected void prepare() {
 		
-		ProcessInfoParameter[] params = getParameter();
-		for (ProcessInfoParameter p : params)
+		IProcessInfoParameter[] params = getParameter();
+		for (IProcessInfoParameter p : params)
 		{
 			if ( p.getParameterName().equals("Reset") )
 				p_reset = p.getParameterAsBoolean();

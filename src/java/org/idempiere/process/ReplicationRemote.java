@@ -24,6 +24,8 @@ import java.util.logging.Level;
 import javax.sql.RowSet;
 
 import org.compiere.impl.MSystem;
+import org.compiere.model.IProcessInfo;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.process.*;
 import org.compiere.process2.RemoteMergeDataVO;
 import org.compiere.process2.RemoteSetupVO;
@@ -49,7 +51,7 @@ public class ReplicationRemote extends SvrProcess
 	 */
 	public void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();
@@ -68,7 +70,7 @@ public class ReplicationRemote extends SvrProcess
 	 */
 	public String doIt() throws Exception
 	{
-		ProcessInfo pi = getProcessInfo();
+		IProcessInfo pi = getProcessInfo();
 		if (log.isLoggable(Level.INFO)) log.info("doIt - " + pi.getTitle());
 		if (pi.getSerializableObject() instanceof RemoteSetupVO)
 			return setupRemote();
@@ -91,7 +93,7 @@ public class ReplicationRemote extends SvrProcess
 	 */
 	private String setupRemote() throws Exception
 	{
-		ProcessInfo pi = getProcessInfo();
+		IProcessInfo pi = getProcessInfo();
 		RemoteSetupVO data = (RemoteSetupVO)pi.getSerializableObject();
 		if (log.isLoggable(Level.INFO)) log.info("setupRemote Start (" + pi + ") " + data);
 
@@ -229,7 +231,7 @@ public class ReplicationRemote extends SvrProcess
 	 */
 	private String mergeDataWithCentral() throws Exception
 	{
-		ProcessInfo pi = getProcessInfo();
+		IProcessInfo pi = getProcessInfo();
 		RemoteMergeDataVO data = (RemoteMergeDataVO)pi.getSerializableObject();
 		if (log.isLoggable(Level.INFO)) log.info("mergeDataWithCentral Start (" + pi + ") " + data);
 		//	Merge Data from Central
@@ -269,7 +271,7 @@ public class ReplicationRemote extends SvrProcess
 	 */
 	private String receiveUpdateFromCentral() throws Exception
 	{
-		ProcessInfo pi = getProcessInfo();
+		IProcessInfo pi = getProcessInfo();
 		RemoteUpdateVO data = (RemoteUpdateVO)pi.getSerializableObject();
 		if (log.isLoggable(Level.INFO)) log.info("receiveUpdateFromCentral Start (" + pi + ") - " + data);
 		//
@@ -311,7 +313,7 @@ public class ReplicationRemote extends SvrProcess
 	{
 		log.info ("exit");
 		@SuppressWarnings("unused")
-		ProcessInfo pi = getProcessInfo();
+		IProcessInfo pi = getProcessInfo();
 		@SuppressWarnings("unused")
 		Object result = doIt(ReplicationLocal.START, "exit", null);
 		return "exit";

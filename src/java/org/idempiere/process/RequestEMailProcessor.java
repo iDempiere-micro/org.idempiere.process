@@ -34,6 +34,7 @@ import javax.mail.MessagingException;
 import javax.mail.Session;
 import javax.mail.Store;
 
+import org.compiere.model.IProcessInfoParameter;
 import org.idempiere.common.exceptions.AdempiereException;
 import org.compiere.orm.MAttachment;
 import org.compiere.orm.MColumn;
@@ -99,7 +100,7 @@ public class RequestEMailProcessor extends SvrProcess implements ProcessEmailHan
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

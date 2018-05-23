@@ -31,6 +31,7 @@ import java.util.List;
 import java.util.logging.Level;
 
 import org.compiere.impl.*;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.orm.MSequence;
 import org.compiere.orm.Query;
 import org.compiere.process.DocAction;
@@ -63,7 +64,7 @@ public class RecurringRun extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		for (ProcessInfoParameter para : getParameter())
+		for (IProcessInfoParameter para : getParameter())
 		{
 			String name = para.getParameterName();
 			if        ("C_RecurringGroup_ID".equals(name)) {

@@ -3,6 +3,7 @@ package org.idempiere.process;
 import java.util.HashSet;
 import java.util.logging.Level;
 
+import org.compiere.model.IProcessInfoParameter;
 import org.idempiere.common.util.Env;
 
 import org.compiere.process.ProcessInfoParameter;
@@ -26,7 +27,7 @@ public class RollUpCosts extends SvrProcess {
 	
 		int chosen_id = 0;
 				
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

@@ -21,6 +21,7 @@ import java.sql.SQLException;
 import java.util.Iterator;
 import java.util.logging.Level;
 
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.model.I_C_BPartner;
 import org.compiere.impl.MBPartner;
 import org.compiere.impl.MInvoice;
@@ -52,7 +53,7 @@ public class BPartnerValidate extends SvrProcess
 	protected void prepare ()
 	{
 		p_C_BPartner_ID = getRecord_ID();
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

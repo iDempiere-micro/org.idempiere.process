@@ -21,6 +21,7 @@ import java.util.logging.Level;
 
 import org.compiere.impl.MInOut;
 import org.compiere.impl.MInOutLine;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.idempiere.common.exceptions.AdempiereException;
@@ -55,7 +56,7 @@ public class InvoiceCreateInOut extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		for (ProcessInfoParameter para : getParameter())
+		for (IProcessInfoParameter para : getParameter())
 		{
 			String name = para.getParameterName();
 			if (para.getParameter() == null)

@@ -29,6 +29,7 @@ import org.compiere.crm.MUser;
 import org.compiere.impl.MBPartner;
 import org.compiere.impl.MOrder;
 import org.compiere.impl.MOrderLine;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.order.X_I_Order;
 import org.compiere.model.I_C_BPartner_Location;
 import org.compiere.model.I_C_Location;
@@ -67,7 +68,7 @@ public class ImportOrder extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

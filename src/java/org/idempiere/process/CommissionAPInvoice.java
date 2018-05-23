@@ -22,6 +22,7 @@ import java.util.logging.Level;
 import org.compiere.impl.MBPartner;
 import org.compiere.impl.MCommission;
 import org.compiere.impl.MCommissionRun;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.orm.MDocType;
 import org.compiere.impl.MInvoice;
 import org.compiere.impl.MInvoiceLine;
@@ -42,7 +43,7 @@ public class CommissionAPInvoice extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

@@ -19,6 +19,7 @@ package org.idempiere.process;
 import java.sql.Timestamp;
 import java.util.logging.Level;
 
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.orm.MDocType;
 import org.compiere.impl.MOrder;
 import org.compiere.impl.MOrderLine;
@@ -50,7 +51,7 @@ public class OrderLineCreateProduction extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

@@ -21,6 +21,7 @@ import java.util.List;
 import java.util.logging.Level;
 
 import org.compiere.impl.MClient;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.orm.MColumn;
 import org.compiere.orm.MTable;
 import org.idempiere.orm.PO;
@@ -46,7 +47,7 @@ public class TranslationDocSync extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

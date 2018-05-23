@@ -28,6 +28,7 @@ package org.idempiere.process;
 import java.util.logging.Level;
 
 import org.compiere.impl.MLanguage;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.idempiere.common.util.AdempiereUserError;
@@ -49,7 +50,7 @@ public class ChangeBaseLanguage extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		for (ProcessInfoParameter para : getParameter())
+		for (IProcessInfoParameter para : getParameter())
 		{
 			String name = para.getParameterName();
 			if (name.equals("AD_Language")) {

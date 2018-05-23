@@ -26,6 +26,7 @@ import java.util.logging.Level;
 import org.adempiere.model.ImportValidator;
 import org.adempiere.process.ImportProcess;
 import org.compiere.impl.MProduct;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.product.MProductPrice;
 import org.compiere.impl.ModelValidationEngine;
 
@@ -62,7 +63,7 @@ public class ImportProduct extends SvrProcess implements ImportProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

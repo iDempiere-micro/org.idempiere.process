@@ -22,6 +22,7 @@ import java.util.logging.Level;
 import org.compiere.impl.MContainer;
 import org.compiere.impl.MNewsChannel;
 import org.compiere.impl.MNewsItem;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 
@@ -41,7 +42,7 @@ public class KIndexRerun extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

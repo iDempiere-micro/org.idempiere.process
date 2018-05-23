@@ -25,6 +25,7 @@ import org.compiere.impl.MProject;
 import org.compiere.impl.MProjectLine;
 import org.compiere.impl.MProjectPhase;
 import org.compiere.impl.MProjectTask;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.idempiere.common.util.Env;
@@ -45,7 +46,7 @@ public class ProjectPhaseGenOrder  extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

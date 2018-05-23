@@ -21,6 +21,7 @@ import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.logging.Level;
 
+import org.compiere.model.IProcessInfoParameter;
 import org.idempiere.common.exceptions.AdempiereException;
 import org.compiere.impl.MAllocationHdr;
 import org.idempiere.common.util.*;
@@ -58,7 +59,7 @@ public class AllocationReset extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			if (log.isLoggable(Level.FINE)) log.fine("prepare - " + para[i]);

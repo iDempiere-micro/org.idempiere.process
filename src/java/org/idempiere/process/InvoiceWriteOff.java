@@ -26,6 +26,7 @@ import org.compiere.impl.MAllocationHdr;
 import org.compiere.impl.MAllocationLine;
 import org.compiere.impl.MInvoice;
 import org.compiere.impl.MPayment;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.process.DocAction;
 import org.idempiere.common.util.Env;
 
@@ -80,7 +81,7 @@ public class InvoiceWriteOff extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

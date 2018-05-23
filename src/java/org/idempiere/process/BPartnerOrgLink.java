@@ -21,6 +21,7 @@ import java.util.logging.Level;
 import org.compiere.crm.MBPartnerLocation;
 import org.compiere.impl.MBPartner;
 import org.compiere.impl.MLocator;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.model.I_C_BPartner_Location;
 import org.compiere.orm.MOrg;
 import org.compiere.orm.MOrgInfo;
@@ -55,7 +56,7 @@ public class BPartnerOrgLink extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

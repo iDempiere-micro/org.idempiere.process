@@ -21,6 +21,7 @@ import java.util.*;
 import java.util.logging.*;
 
 import org.compiere.impl.MProduct;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.product.MProductBOM;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
@@ -57,7 +58,7 @@ public class BOMVerify extends SvrProcess
 	 */
 	protected void prepare ()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

@@ -27,6 +27,7 @@ import org.compiere.impl.MProduct;
 import org.compiere.impl.MStorageOnHand;
 import org.compiere.impl.MStorageReservation;
 import org.compiere.impl.MTransaction;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.orm.Query;
 import org.compiere.impl.X_M_Production;
 import org.compiere.impl.X_M_ProductionLine;
@@ -63,7 +64,7 @@ public class M_Production_Run extends SvrProcess {
 	 * Prepare - e.g., get Parameters.
 	 */
 	protected void prepare() {
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++) {
 			String name = para[i].getParameterName();
 			if (para[i].getParameter() == null)

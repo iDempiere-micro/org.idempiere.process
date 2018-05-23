@@ -28,6 +28,7 @@ import org.compiere.impl.MProduct;
 import org.compiere.impl.MProduction;
 import org.compiere.impl.MProject;
 import org.compiere.impl.MProjectLine;
+import org.compiere.model.IProcessInfoParameter;
 import org.idempiere.common.util.Env;
 import org.compiere.util.Msg;
 
@@ -54,7 +55,7 @@ public class ProjectGenProduction extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

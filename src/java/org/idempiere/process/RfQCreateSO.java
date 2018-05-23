@@ -25,6 +25,7 @@ import org.compiere.impl.MOrderLine;
 import org.compiere.impl.MRfQ;
 import org.compiere.impl.MRfQLine;
 import org.compiere.impl.MRfQLineQty;
+import org.compiere.model.IProcessInfoParameter;
 import org.idempiere.common.util.Env;
 
 import org.compiere.process.ProcessInfoParameter;
@@ -47,7 +48,7 @@ public class RfQCreateSO extends SvrProcess
 	 */
 	protected void prepare ()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

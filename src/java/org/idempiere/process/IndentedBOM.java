@@ -25,6 +25,7 @@ import org.adempiere.exceptions.FillMandatoryException;
 import org.compiere.impl.MAcctSchema;
 import org.compiere.impl.MCost;
 import org.compiere.impl.MProduct;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.product.MProductBOM;
 import org.compiere.orm.Query;
 import org.compiere.impl.X_T_BOM_Indented;
@@ -55,7 +56,7 @@ public class IndentedBOM extends SvrProcess
 
 	protected void prepare()
 	{
-		for (ProcessInfoParameter para : getParameter())
+		for (IProcessInfoParameter para : getParameter())
 		{
 			String name = para.getParameterName();
 			if (para.getParameter() == null)

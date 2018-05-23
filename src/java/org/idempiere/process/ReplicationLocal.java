@@ -29,7 +29,10 @@ import java.util.logging.Level;
 import javax.sql.RowSet;
 
 import org.compiere.impl.*;
-import org.compiere.interfaces.Server;
+import org.compiere.model.IProcessInfo;
+import org.compiere.model.IProcessInfoLog;
+import org.compiere.model.IProcessInfoParameter;
+import org.compiere.model.Server;
 import org.compiere.process.*;
 import org.compiere.process2.RemoteMergeDataVO;
 import org.compiere.process2.RemoteSetupVO;
@@ -75,7 +78,7 @@ public class ReplicationLocal extends SvrProcess
 	 */
 	public void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();
@@ -185,7 +188,7 @@ public class ReplicationLocal extends SvrProcess
 		data.Prefix = m_replication.getPrefix();
 		data.Suffix = m_replication.getSuffix();
 		//	Process Info
-		ProcessInfo pi = new ProcessInfo(data.toString(), 0);
+		IProcessInfo pi = new ProcessInfo(data.toString(), 0);
 		pi.setClassName (REMOTE);
 		pi.setSerializableObject(data);
 		Object result = doIt(START, "init", new Object[]{m_system});
@@ -193,7 +196,7 @@ public class ReplicationLocal extends SvrProcess
 			throw new Exception("setupRemote - Init Error - " + result);
 		//	send it
 		pi = m_serverRemote.process (new Properties (), pi);
-		ProcessInfoLog[] logs = pi.getLogs();
+		IProcessInfoLog[] logs = pi.getLogs();
 		Timestamp dateRun = null;
 		if (logs != null && logs.length > 0)
 			dateRun = logs[0].getP_Date();	//	User Remote Timestamp!
@@ -286,12 +289,12 @@ public class ReplicationLocal extends SvrProcess
 		}
 
 		//	Process Info
-		ProcessInfo pi = new ProcessInfo("MergeData", 0);
+		IProcessInfo pi = new ProcessInfo("MergeData", 0);
 		pi.setClassName (REMOTE);
 		pi.setSerializableObject(data);
 		//	send it
 		pi = m_serverRemote.process (new Properties (), pi);
-		ProcessInfoLog[] logs = pi.getLogs();
+		IProcessInfoLog[] logs = pi.getLogs();
 		StringBuilder msg = new StringBuilder("< ");
 		if (logs != null && logs.length > 0)
 			msg.append(logs[0].getP_Msg());	//	Remote Message
@@ -484,13 +487,13 @@ public class ReplicationLocal extends SvrProcess
 			if (log.isLoggable(Level.FINE)) log.fine(TableName + " #" + rows);
 
 		//	Process Info
-		ProcessInfo pi = new ProcessInfo("SendUpdates", 0);
+		IProcessInfo pi = new ProcessInfo("SendUpdates", 0);
 		pi.setClassName (REMOTE);
 		pi.setSerializableObject(data);
 		//	send it
 		pi = m_serverRemote.process (new Properties (), pi);
 		if (log.isLoggable(Level.INFO)) log.info("sendUpdatesTable - " + pi);
-		ProcessInfoLog[] logs = pi.getLogs();
+		IProcessInfoLog[] logs = pi.getLogs();
 		StringBuilder msg = new StringBuilder("> ");
 		if (logs != null && logs.length > 0)
 			msg.append(logs[0].getP_Msg());	//	Remote Message

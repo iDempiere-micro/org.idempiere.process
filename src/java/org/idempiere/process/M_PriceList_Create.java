@@ -30,6 +30,7 @@ import java.util.logging.Level;
 
 import org.compiere.impl.MAcctSchema;
 import org.compiere.impl.MClientInfo;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.product.MDiscountSchemaLine;
 import org.compiere.impl.MProduct;
 import org.compiere.product.MProductPrice;
@@ -65,7 +66,7 @@ public class M_PriceList_Create extends SvrProcess {
 	 * Prepare - e.g., get Parameters.
 	 */
 	protected void prepare() {
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++) {
 			String name = para[i].getParameterName();
 			if (para[i].getParameter() == null)

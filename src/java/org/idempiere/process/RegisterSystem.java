@@ -25,6 +25,7 @@ import java.util.logging.Level;
 import org.compiere.impl.MLocation;
 import org.compiere.impl.MSystem;
 import org.compiere.impl.M_Registration;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.compiere.webutil.WebEnv;
@@ -44,7 +45,7 @@ public class RegisterSystem extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

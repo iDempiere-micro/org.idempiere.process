@@ -42,6 +42,7 @@ import org.compiere.acct.DocManager;
 import org.compiere.impl.MAcctSchema;
 import org.compiere.impl.MClient;
 import org.compiere.impl.MCost;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.compiere.util.Msg;
@@ -74,7 +75,7 @@ public class ClientAcctProcessor extends SvrProcess
 	 */
 	protected void prepare ()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

@@ -23,6 +23,7 @@ import org.compiere.impl.MRfQResponse;
 import org.compiere.impl.MRfQTopic;
 import org.compiere.impl.MRfQTopicSubscriber;
 
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 
@@ -44,7 +45,7 @@ public class RfQCreate extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

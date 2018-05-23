@@ -21,6 +21,7 @@ import java.util.logging.Level;
 
 import org.compiere.impl.MProduct;
 import org.compiere.impl.MUOMConversion;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.product.MUOM;
 import org.idempiere.common.util.Env;
 
@@ -50,7 +51,7 @@ public class ProductUOMConvert extends SvrProcess
 	 */
 	protected void prepare ()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

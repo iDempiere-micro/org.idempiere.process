@@ -19,6 +19,7 @@ package org.idempiere.process;
 import java.math.BigDecimal;
 import java.util.logging.Level;
 
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.report.MReportColumn;
 import org.compiere.report.MReportColumnSet;
 
@@ -54,7 +55,7 @@ public class ReportColumnSet_Copy extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

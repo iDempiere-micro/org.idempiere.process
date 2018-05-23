@@ -17,6 +17,7 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.idempiere.common.exceptions.AdempiereException;
@@ -54,8 +55,8 @@ public class CopyReportProcess extends SvrProcess {
 	@Override
 	protected void prepare() {
 		
-		ProcessInfoParameter[] params = getParameter();
-		for (ProcessInfoParameter parameter : params)
+		IProcessInfoParameter[] params = getParameter();
+		for (IProcessInfoParameter parameter : params)
 		{
 			String para = parameter.getParameterName();
 			if ( para.equals("AD_Process_ID") )

@@ -18,6 +18,7 @@ package org.idempiere.process;
 
 import java.util.logging.Level;
 
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.orm.MSysConfig;
 import org.compiere.impl.MUser;
 import org.compiere.process.ProcessInfoParameter;
@@ -46,7 +47,7 @@ public class UserPassword extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

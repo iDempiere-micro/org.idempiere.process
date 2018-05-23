@@ -30,6 +30,7 @@ import org.compiere.impl.MCommissionDetail;
 import org.compiere.impl.MCommissionLine;
 import org.compiere.impl.MCommissionRun;
 import org.compiere.impl.MUser;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.compiere.product.MCurrency;
@@ -58,7 +59,7 @@ public class CommissionCalc extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

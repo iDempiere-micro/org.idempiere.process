@@ -28,6 +28,7 @@ import java.util.logging.Level;
 import org.adempiere.base.Core;
 import org.compiere.impl.MBPartner;
 import org.compiere.impl.MClient;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.orm.MDocType;
 import org.compiere.impl.MLocator;
 import org.compiere.impl.MLocatorType;
@@ -85,7 +86,7 @@ public class ReplenishReportProduction extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

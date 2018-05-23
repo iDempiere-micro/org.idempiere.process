@@ -21,7 +21,8 @@ import java.util.logging.Level;
 import org.compiere.impl.MClient;
 import org.compiere.impl.MDunningRun;
 import org.compiere.impl.MDunningRunEntry;
-import org.compiere.impl.MMailText;
+import org.compiere.model.IProcessInfoParameter;
+import org.compiere.wf.MMailText;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.idempiere.common.util.AdempiereUserError;
@@ -53,7 +54,7 @@ public class DunningPrint extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

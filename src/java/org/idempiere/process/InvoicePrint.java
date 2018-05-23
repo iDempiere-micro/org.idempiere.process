@@ -20,9 +20,10 @@ import java.sql.Timestamp;
 import java.util.logging.Level;
 
 import org.compiere.impl.MClient;
-import org.compiere.impl.MMailText;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
+import org.compiere.wf.MMailText;
 import org.idempiere.common.util.*;
 
 /**
@@ -50,7 +51,7 @@ public class InvoicePrint extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

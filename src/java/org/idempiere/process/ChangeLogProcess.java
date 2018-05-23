@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 
 import org.compiere.impl.MChangeLog;
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.orm.MColumn;
 import org.compiere.orm.MTable;
 import org.compiere.util.DisplayType;
@@ -86,7 +87,7 @@ public class ChangeLogProcess extends SvrProcess
 	 */
 	protected void prepare ()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();

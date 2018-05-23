@@ -4,12 +4,14 @@ import java.sql.Timestamp;
 import java.util.List;
 import java.util.logging.Level;
 
+import org.compiere.model.IProcessInfoParameter;
 import org.compiere.model.I_M_ProductionPlan;
 import org.compiere.impl.MProduction;
 import org.compiere.impl.MProductionLine;
 import org.compiere.impl.MProductionPlan;
 import org.compiere.orm.Query;
 import org.compiere.process.ProcessInfo;
+import org.compiere.server.ServerProcessCtl;
 import org.idempiere.common.util.Env;
 import org.compiere.wf.MWorkflow;
 
@@ -33,7 +35,7 @@ public class ProductionProcess extends SvrProcess {
 	
 	protected void prepare() {
 		
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();
@@ -68,7 +70,7 @@ public class ProductionProcess extends SvrProcess {
 	}
 
 	public static int procesProduction(MProduction production, Timestamp movementDate, boolean mustBeStocked) {
-		ProcessInfo pi = MWorkflow.runDocumentActionWorkflow(production, "CO");
+		ProcessInfo pi = ServerProcessCtl.runDocumentActionWorkflow(production, "CO");
 		if (pi.isError()) {
 			throw new RuntimeException(pi.getSummary());
 		} else {

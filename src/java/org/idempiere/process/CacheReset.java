@@ -16,8 +16,8 @@
  *****************************************************************************/
 package org.idempiere.process;
 
-import org.compiere.process2.ClientProcess;
 import org.compiere.process.SvrProcess;
+import org.compiere.server.ClientProcess;
 import org.idempiere.common.util.CacheMgt;
 
 /**

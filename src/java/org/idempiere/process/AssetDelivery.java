@@ -25,7 +25,8 @@ import java.util.logging.Level;
 import org.compiere.impl.MAsset;
 import org.compiere.impl.MAssetDelivery;
 import org.compiere.impl.MClient;
-import org.compiere.impl.MMailText;
+import org.compiere.model.IProcessInfoParameter;
+import org.compiere.wf.MMailText;
 import org.compiere.impl.MUser;
 import org.compiere.impl.MUserMail;
 import org.compiere.product.MProductDownload;
@@ -62,7 +63,7 @@ public class AssetDelivery extends SvrProcess
 	 */
 	protected void prepare()
 	{
-		ProcessInfoParameter[] para = getParameter();
+		IProcessInfoParameter[] para = getParameter();
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();
@@ -210,8 +211,8 @@ public class AssetDelivery extends SvrProcess
 
 		//	Create Mail
 		EMail email = m_client.createEMail(user.getEMail(), null, null);
-		m_MailText.setPO(user);
-		m_MailText.setPO(asset);
+		m_MailText.setPO(user, false);
+		m_MailText.setPO(asset, false);
 		String message = m_MailText.getMailText(true);
 		if (m_MailText.isHtml())
 			email.setMessageHTML(m_MailText.getMailHeader(), message);
@@ -265,7 +266,7 @@ public class AssetDelivery extends SvrProcess
 		if (m_client.isSmtpAuthorization())
 			email.createAuthenticator(m_client.getRequestUser(), m_client.getRequestUserPW());
 		m_MailText.setUser(user);
-		m_MailText.setPO(asset);
+		m_MailText.setPO(asset, false);
 		String message = m_MailText.getMailText(true);
 		if (m_MailText.isHtml() || m_AttachAsset)
 			email.setMessageHTML(m_MailText.getMailHeader(), message);

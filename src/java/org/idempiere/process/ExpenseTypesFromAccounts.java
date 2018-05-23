@@ -34,10 +34,7 @@ import java.util.Map;
 import java.util.TreeMap;
 import java.util.logging.Level;
 
-import org.compiere.model.I_C_ElementValue;
-import org.compiere.model.I_C_ValidCombination;
-import org.compiere.model.I_M_Product;
-import org.compiere.model.I_M_Product_Acct;
+import org.compiere.model.*;
 import org.compiere.impl.MAccount;
 import org.compiere.impl.MElementValue;
 import org.compiere.product.MPriceList;
@@ -78,7 +75,7 @@ public class ExpenseTypesFromAccounts extends SvrProcess {
     protected void prepare() {
 
         // Get parameters
-        ProcessInfoParameter[] para = getParameter();
+        IProcessInfoParameter[] para = getParameter();
         for (int i = 0; i < para.length; i++) {
             String name = para[i].getParameterName();
             if (para[i].getParameter() == null) {
