@@ -56,6 +56,8 @@ implements ImportProcess
 	private boolean			m_deleteOldImported = false;
 	/**	Only validate, don't import		*/
 	private boolean			p_IsValidateOnly = false;
+	/**	Create all locations			*/
+	private boolean			m_createAllLocations = false;
 
 	/** Effective						*/
 	private Timestamp		m_DateValue = null;
@@ -73,6 +75,8 @@ implements ImportProcess
 				m_AD_Client_ID = ((BigDecimal)para[i].getParameter()).intValue();
 			else if (name.equals("DeleteOldImported"))
 				m_deleteOldImported = "Y".equals(para[i].getParameter());
+			else if (name.equals("CreateAllLocations"))
+				m_createAllLocations = "Y".equals(para[i].getParameter());
 			else if (name.equals("IsValidateOnly"))
 				p_IsValidateOnly = para[i].getParameterAsBoolean();
 			else
@@ -320,73 +324,67 @@ implements ImportProcess
 				if (log.isLoggable(Level.FINE)) log.fine(msglog.toString());
 
 
-				if ( ! New_BPValue.equals(Old_BPValue)) {
-					//	****	Create/Update BPartner	****
-					bp = null;
+				if ( m_createAllLocations || ! New_BPValue.equals(Old_BPValue)) {
+					if (! New_BPValue.equals(Old_BPValue)) {
+						//	****	Create/Update BPartner	****
+						bp = null;
 
-					if (impBP.getC_BPartner_ID() == 0)	//	Insert new BPartner
-					{
-						bp = new MBPartner(impBP);
-						ModelValidationEngine.get().fireImportValidate(this, impBP, bp, ImportValidator.TIMING_AFTER_IMPORT);
-						
-						setTypeOfBPartner(impBP,bp);
-						
-						if (bp.save())
+						if (impBP.getC_BPartner_ID() == 0)    //	Insert new BPartner
 						{
-							impBP.setC_BPartner_ID(bp.getC_BPartner_ID());
-							msglog = new StringBuilder("Insert BPartner - ").append(bp.getC_BPartner_ID());
-							if (log.isLoggable(Level.FINEST)) log.finest(msglog.toString());
-							noInsert++;
-						}
-						else
-						{
-							sql = new StringBuilder ("UPDATE I_BPartner i ")
+							bp = new MBPartner(impBP);
+							ModelValidationEngine.get().fireImportValidate(this, impBP, bp, ImportValidator.TIMING_AFTER_IMPORT);
+
+							setTypeOfBPartner(impBP, bp);
+
+							if (bp.save()) {
+								impBP.setC_BPartner_ID(bp.getC_BPartner_ID());
+								msglog = new StringBuilder("Insert BPartner - ").append(bp.getC_BPartner_ID());
+								if (log.isLoggable(Level.FINEST)) log.finest(msglog.toString());
+								noInsert++;
+							} else {
+								sql = new StringBuilder("UPDATE I_BPartner i ")
 									.append("SET I_IsImported='E', I_ErrorMsg=I_ErrorMsg||")
-							.append("'Cannot Insert BPartner, ' ")
-							.append("WHERE I_BPartner_ID=").append(impBP.getI_BPartner_ID());
-							DB.executeUpdateEx(sql.toString(), get_TrxName());
-							continue;
-						}
-					}
-					else				//	Update existing BPartner
-					{
-						bp = new MBPartner(getCtx(), impBP.getC_BPartner_ID(), get_TrxName());
-						//	if (impBP.getValue() != null)			//	not to overwite
-						//		bp.setValue(impBP.getValue());
-						if (impBP.getName() != null)
+									.append("'Cannot Insert BPartner, ' ")
+									.append("WHERE I_BPartner_ID=").append(impBP.getI_BPartner_ID());
+								DB.executeUpdateEx(sql.toString(), get_TrxName());
+								continue;
+							}
+						} else                //	Update existing BPartner
 						{
-							bp.setName(impBP.getName());
-							bp.setName2(impBP.getName2());
-						}
-						if (impBP.getDUNS() != null)
-							bp.setDUNS(impBP.getDUNS());
-						if (impBP.getTaxID() != null)
-							bp.setTaxID(impBP.getTaxID());
-						if (impBP.getNAICS() != null)
-							bp.setNAICS(impBP.getNAICS());
-						if (impBP.getDescription() != null)
-							bp.setDescription(impBP.getDescription());
-						if (impBP.getC_BP_Group_ID() != 0)
-							bp.setC_BP_Group_ID(impBP.getC_BP_Group_ID());
-						ModelValidationEngine.get().fireImportValidate(this, impBP, bp, ImportValidator.TIMING_AFTER_IMPORT);
-						
-						setTypeOfBPartner(impBP,bp);
-						
-						//
-						if (bp.save())
-						{
-							msglog = new StringBuilder("Update BPartner - ").append(bp.getC_BPartner_ID());
-							if (log.isLoggable(Level.FINEST)) log.finest(msglog.toString());
-							noUpdate++;
-						}
-						else
-						{
-							sql = new StringBuilder ("UPDATE I_BPartner i ")
+							bp = new MBPartner(getCtx(), impBP.getC_BPartner_ID(), get_TrxName());
+							//	if (impBP.getValue() != null)			//	not to overwite
+							//		bp.setValue(impBP.getValue());
+							if (impBP.getName() != null) {
+								bp.setName(impBP.getName());
+								bp.setName2(impBP.getName2());
+							}
+							if (impBP.getDUNS() != null)
+								bp.setDUNS(impBP.getDUNS());
+							if (impBP.getTaxID() != null)
+								bp.setTaxID(impBP.getTaxID());
+							if (impBP.getNAICS() != null)
+								bp.setNAICS(impBP.getNAICS());
+							if (impBP.getDescription() != null)
+								bp.setDescription(impBP.getDescription());
+							if (impBP.getC_BP_Group_ID() != 0)
+								bp.setC_BP_Group_ID(impBP.getC_BP_Group_ID());
+							ModelValidationEngine.get().fireImportValidate(this, impBP, bp, ImportValidator.TIMING_AFTER_IMPORT);
+
+							setTypeOfBPartner(impBP, bp);
+
+							//
+							if (bp.save()) {
+								msglog = new StringBuilder("Update BPartner - ").append(bp.getC_BPartner_ID());
+								if (log.isLoggable(Level.FINEST)) log.finest(msglog.toString());
+								noUpdate++;
+							} else {
+								sql = new StringBuilder("UPDATE I_BPartner i ")
 									.append("SET I_IsImported='E', I_ErrorMsg=I_ErrorMsg||")
-							.append("'Cannot Update BPartner, ' ")
-							.append("WHERE I_BPartner_ID=").append(impBP.getI_BPartner_ID());
-							DB.executeUpdateEx(sql.toString(), get_TrxName());
-							continue;
+									.append("'Cannot Update BPartner, ' ")
+									.append("WHERE I_BPartner_ID=").append(impBP.getI_BPartner_ID());
+								DB.executeUpdateEx(sql.toString(), get_TrxName());
+								continue;
+							}
 						}
 					}
 
@@ -395,7 +393,9 @@ implements ImportProcess
 					if (impBP.getC_BPartner_Location_ID() != 0)		//	Update Location
 					{
 						bpl = new MBPartnerLocation(getCtx(), impBP.getC_BPartner_Location_ID(), get_TrxName());
-						MLocation location = new MLocation(getCtx(), bpl.getC_Location_ID(), get_TrxName());
+                        bpl.setIsShipTo(impBP.isShipTo());
+                        bpl.setIsBillTo(impBP.isBillTo());
+                        MLocation location = new MLocation(getCtx(), bpl.getC_Location_ID(), get_TrxName());
 						location.setC_Country_ID(impBP.getC_Country_ID());
 						location.setC_Region_ID(impBP.getC_Region_ID());
 						location.setCity(impBP.getCity());
@@ -448,6 +448,8 @@ implements ImportProcess
 							bpl.setPhone(impBP.getPhone());
 							bpl.setPhone2(impBP.getPhone2());
 							bpl.setFax(impBP.getFax());
+                            bpl.setIsShipTo(impBP.isShipTo());
+                            bpl.setIsBillTo(impBP.isBillTo());
 							ModelValidationEngine.get().fireImportValidate(this, impBP, bpl, ImportValidator.TIMING_AFTER_IMPORT);
 							if (bpl.save())
 							{
