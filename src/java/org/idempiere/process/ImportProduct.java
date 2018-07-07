@@ -23,17 +23,16 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.logging.Level;
 
-import org.adempiere.model.ImportValidator;
-import org.adempiere.process.ImportProcess;
+import org.compiere.process.ImportValidator;
+import org.compiere.process.ImportProcess;
 import org.compiere.impl.MProduct;
 import org.compiere.model.IProcessInfoParameter;
 import org.compiere.product.MProductPrice;
-import org.compiere.impl.ModelValidationEngine;
 
 
-import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.compiere.product.X_I_Product;
+import org.compiere.validation.ModelValidationEngine;
 import org.idempiere.common.util.DB;
 
 /**
